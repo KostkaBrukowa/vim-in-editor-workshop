@@ -1,0 +1,145 @@
+Lekcja 3.1.: Kopiowanie usuwanie wklejanie
+
+*****
+
+- p - paste
+- d - delete
+- y - yank (copy) (c jest zarezerwowane dla czegoś innego)
+
+*****
+
+- Jak kopiujemy i wklejamy rzeczy?
+1. Upewnij się że jesteś w normal mode - `<esc>` lub wybrany przez ciebie skrót
+2. Wciśnij przycisk `v` (wejście do visual mode)
+3. Przenieś swój kursor do ostatniego znaku który chcesz skopiować 
+4. Wciśnij przycisk `y` (yank)
+5. Przejdź do miejsca do którego chciałbyś wklejić skopiowany text.
+6. Wciśnij przysisk `p` (paste)
+
+Gratulacje! Właśnie skopiowałeś i wkleiłeś text.
+
+```
+const marketplace = 'pl-PL';
+const currency = getCurrencySymbol(marketplace)
+
+export function getCurrencySymbol(): string {
+  const currency = getCurrencyFromStore();
+
+  return (0)
+    .toLocaleString(_currentLanguage, {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+      locale: 'pl-PL' // <---------------------- zamień i usuń komentarz
+    })
+    .replace(/\d/g, '')
+    .trim();
+}
+```
+
+Pro tip: możecie skopiowany text zastąpić zaznaczone słowo. Aby to zrobić:
+1. Skopiujcie zaznaczony tekst.
+2. Zaznaczcie tekst który chcecie zasąpić
+3. Wciśnijcie `p`
+I tyle tekst zostanie zasąpiony
+
+```
+const marketplace = 'pl-PL';
+const currency = getCurrencySymbol(marketplace)
+
+export function getCurrencySymbol(marketplace: string): string {
+  const currency = getCurrencyFromStore();
+
+  return (0)
+    .toLocaleString(_currentLanguage, {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+      locale: 'pl-PL' 
+    })
+    .replace(/\d/g, '')
+    .trim();
+}
+```
+
+Przenoszenie:
+Gdy usuniecie tekst on automatycznie zostaje skopiowany! Należy na to bardzo uważać
+żeby to co znalazło się w waszym schowku nie zostało nadpisane przez usuwanie.
+
+Zadanie: zastąp `locale: 'pl-PL'` na `locale: marketplace` i usuń linię `const locale = 'pl-PL'`
+```
+const marketplace = 'pl-PL';
+const currency = getCurrencySymbol(marketplace)
+
+export function getCurrencySymbol(marketplace: string): string {
+  const locale = 'pl-PL'
+  const currency = getCurrencyFromStore();
+
+  return (0)
+    .toLocaleString(_currentLanguage, {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+      locale: 'pl-PL' 
+    })
+    .replace(/\d/g, '')
+    .trim();
+}
+```
+
+Visual line mode:
+Gdy wciśniemy przycisk `V` zaczniemy zaznaczać całe linie. Dzięki temu będziemy mogli
+w łatwy i szybki sposób usuwać całe linie, kopiować całe linie, usuwać całe bloki linii.
+
+Zadanie:
+- usunąć unusedVariables
+- przenieść wywołanie metody `pageViewed` do useEffect
+- inline title do komponentu `ModuleHeader`
+
+```
+const HomePage: React.FC = () => {
+  const unusedVariable1 = 1;
+  const { type } = useHomePageUserType();
+  const location = useLocation();
+  const unusedVariable2 = 2;
+  const unusedVariable3 = 3;
+  const unusedVariable4 = 4;
+  const unusedVariable5 = 5;
+  const { marketplaceId } = useSelector(selectMarketplace);
+
+  const title = i18n('Witaj w Allegro Ads!'); // <------ inline the variable into ModuleHeader
+
+  HomePageEvents.pageViewed(location, marketplaceId, type);
+  useEffect(() => {
+  }, [location, marketplaceId, type]);
+
+  return (
+    <>
+      <ModuleHeader>{title}</ModuleHeader>
+      <MarketSwitcher className={style.marketSwitcher} />
+      <HomePageContent />
+    </>
+  );
+};
+
+```
+
+Różnica między `p` a `P`.
+`p` wkleja przed kursorem, a `P` wkleja za kursorem.
+
+
+```
+const ten = 10;
+twelve = 12;
+thirteen = 13;
+fourteen = 14;
+fifteen = 15;
+
+function foo(firstArgument, ) {}
+```
+
+
+Zadanie podsumowywujące

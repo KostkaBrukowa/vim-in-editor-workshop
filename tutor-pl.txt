@@ -1,0 +1,216 @@
+===============================================================================
+=    W i t a j   w   t u t o r i a l u   V I M - a      -    Wersja  1.7.     =
+===============================================================================
+
+     Vim to potężny edytor, który posiada wiele poleceń, zbyt dużo, by
+     wyjaśnić je wszystkie w tym tutorialu. Ten przewodnik ma nauczyć
+     Cię posługiwać się wystarczająco wieloma komendami, byś mógł łatwo
+     używać Vima jako edytora ogólnego przeznaczenia.
+
+     Czas potrzebny na ukończenie tutoriala to 25 do 30 minut i zależy
+     od tego jak wiele czasu spędzisz na eksperymentowaniu.
+
+	 UWAGA:
+	 Polecenia wykonywane w czasie lekcji zmodyfikują tekst. Zrób
+	 wcześniej kopię tego pliku do ćwiczeń (jeśli zacząłeś komendą
+	 "vimtutor", to już pracujesz na kopii).
+
+	 Pamiętaj, że przewodnik ten został zaprojektowany do nauki poprzez
+	 ćwiczenia. Oznacza to, że musisz wykonywać polecenia, by nauczyć się ich
+	 prawidłowo. Jeśli będziesz jedynie czytał tekst, szybko zapomnisz wiele
+	 poleceń!
+
+     Teraz upewnij się, że nie masz wciśniętego Caps Locka i wciskaj  j
+     tak długo dopóki Lekcja 1.1. nie wypełni całkowicie ekranu.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		  Lekcja 1.1.: PORUSZANIE SIĘ KURSOREM
+
+       ** By wykonać ruch kursorem, wciśnij h, j, k, l jak pokazano. **
+
+	       ^
+	       k		      Wskazówka:  h jest po lewej
+	  < h	  l >				  l jest po prawej
+	       j				  j wygląda jak strzałka w dół
+	       v
+  1. Poruszaj kursorem dopóki nie będziesz pewien, że pamiętasz polecenia.
+
+  2. Trzymaj  j  tak długo aż będzie się powtarzał.
+     Teraz wiesz jak dojść do następnej lekcji.
+
+  3. Używając strzałki w dół przejdź do następnej lekcji.
+
+Uwaga: Jeśli nie jesteś pewien czegoś co wpisałeś, wciśnij <ESC>, by wrócić do
+       trybu Normal. Wtedy powtórz polecenie.
+
+Uwaga: Klawisze kursora także powinny działać, ale używając  hjkl  będziesz
+       w stanie poruszać się o wiele szybciej, jak się tylko przyzwyczaisz.
+       Naprawdę!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		    Lekcja 1.2.: WYCHODZENIE Z VIM-a
+
+ !! UWAGA: Przed wykonaniem jakiegokolwiek polecenia przeczytaj całą lekcję !!
+
+  1. Wciśnij <ESC> (aby upewnić się, że jesteś w trybie Normal).
+  2. Wpisz:			:q!<ENTER>.
+     To spowoduje wyjście z edytora PORZUCAJĄC wszelkie zmiany, jakie
+     zdążyłeś zrobić. Jeśli chcesz zapamiętać zmiany i wyjść,
+     wpisz:			:wq<ENTER>
+  3. Kiedy widzisz znak zachęty powłoki wpisz komendę, żeby wrócić
+     do tutoriala. Czyli:	vimtutor<ENTER>
+  4. Jeśli chcesz zapamiętać polecenia, wykonaj kroki 1. do 3., aby
+     wyjść i wrócić do edytora.
+UWAGA: :q!<ENTER> porzuca wszelkie zmiany jakie zrobiłeś. W następnych
+       lekcjach dowiesz się jak je zapamiętywać.
+
+  5. Przenieś kursor do lekcji 1.3.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		 Lekcja 1.3.: EDYCJA TEKSTU - KASOWANIE
+
+	    ** Wciśnij  x  aby usunąć znak pod kursorem. **
+
+  1. Przenieś kursor do linii poniżej oznaczonej --->.
+
+  2. By poprawić błędy, naprowadź kursor na znak do usunięcia.
+
+  3. Wciśnij  x  aby usunąć niechciany znak.
+
+  4. Powtarzaj kroki 2. do 4. dopóki zdanie nie jest poprawne.
+
+---> Kkrowa prrzeskoczyła prrzez ksiiężycc.
+
+  5. Teraz, kiedy zdanie jest poprawione, przejdź do Lekcji 1.4.
+
+UWAGA: Ucz się przez ćwiczenie, nie wkuwanie.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	   Lekcja 1.4.: EDYCJA TEKSTU - INSERT (wprowadzanie)
+
+
+		  ** Wciśnij  i  aby wstawić tekst. **
+
+  1. Przenieś kursor do pierwszej linii poniżej oznaczonej --->.
+
+  2. Aby poprawić pierwszy wiersz, ustaw kursor na pierwszym znaku PO tym,
+     gdzie tekst ma być wstawiony.
+
+  3. Wciśnij  i  a następnie wpisz konieczne poprawki.
+
+  4. Po poprawieniu błędu wciśnij <ESC>, by wrócić do trybu Normal.
+     Powtarzaj kroki 2. do 4., aby poprawić całe zdanie.
+
+---> W tej brkje trochę .
+---> W tej linii brakuje trochę tekstu.
+
+  5. Kiedy czujesz się swobodnie wstawiając tekst, przejdź do
+     podsumowania poniżej.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	   Lekcja 1.5.: EDYCJA TEKSTU - APPENDING (dodawanie)
+
+
+		   ** Wciśnij  A  by dodać tekst. **
+
+  1. Przenieś kursor do pierwszej linii poniżej oznaczonej --->.
+     Nie ma znaczenia, który to będzie znak.
+
+  2. Wciśnij  A  i wpisz odpowiednie dodatki.
+
+  3. Kiedy tekst został dodany, wciśnij <ESC> i wróć do trybu Normalnego.
+
+  4. Przenieś kursor do drugiej linii oznaczonej ---> i powtórz kroki 2. i 3.,
+     aby poprawić zdanie.
+
+---> Brakuje tu tro
+     Brakuje tu trochę tekstu.
+---> Tu też trochę bra
+     Tu też trochę brakuje.
+
+  5. Kiedy już utrwaliłeś ćwiczenie, przejdź do lekcji 1.6.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			  Lekcja 1.6.: EDYCJA PLIKU
+
+		  ** Użyj  :wq  aby zapisać plik i wyjść. **
+
+   !! UWAGA: zanim wykonasz jakiekolwiek polecenia przeczytaj całą lekcję !!
+
+  1. Zakończ tutorial tak jak w lekcji 1.2.:  :q!
+     lub, jeśli masz dostęp do innego terminala, wykonaj kolejne kroki tam.
+  2. W powłoce wydaj polecenie:  vim tutor<ENTER>
+     "vim" jest poleceniem uruchamiającym edytor Vim. 'tutor' to nazwa pliku,
+     jaki chcesz edytować. Użyj pliku, który może zostać zmieniony.
+  3. Dodaj i usuń tekst tak, jak się nauczyłeś w poprzednich lekcjach.
+  4. Zapisz plik ze zmianami i opuść Vima:  :wq<ENTER>
+  5. Jeśli zakończyłeś vimtutor w kroku 1., uruchom go ponownie i przejdź
+     do podsumowania poniżej.
+  6. Po przeczytaniu wszystkich kroków i ich zrozumieniu: wykonaj je.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			     LEKCJA 1. PODSUMOWANIE
+  1. Poruszasz kursorem używając "strzałek" i klawiszy  hjkl .
+       h (w lewo)	 j (w dół)	 k (do góry)		l (w prawo)
+  2. By wejść do Vima, (z powłoki) wpisz:
+			    vim NAZWA_PLIKU<ENTER>
+  3. By wyjść z Vima, wpisz:
+			    <ESC> :q!<ENTER>  by usunąć wszystkie zmiany.
+	     LUB:	    <ESC> :wq<ENTER>  by zmiany zachować.
+
+  4. By usunąć znak pod kursorem, wciśnij:  x
+
+  5. By wstawić tekst przed kursorem lub dodać:
+	i   wpisz tekst   <ESC>         wstawi przed kursorem
+	A   wpisz tekst   <ESC>         doda na końcu linii
+
+UWAGA: Wciśnięcie <ESC> przeniesie Cię z powrotem do trybu Normal
+       lub odwoła niechciane lub częściowo wprowadzone polecenia.
+
+Teraz możemy kontynuować i przejść do Lekcji 2.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		  Lekcja 2.1.: POLECENIE DELETE (usuwanie)
+
+
+		      ** Wpisz  dw  by usunąć wyraz. **
+
+  1. Wciśnij  <ESC>, by upewnić się, że jesteś w trybie Normal.
+
+  2. Przenieś kursor do linii poniżej oznaczonej --->.
+
+  3. Przesuń kursor na początek wyrazu, który chcesz usunąć.
+
+  4. Wpisz   dw   by usunąć wyraz.
+
+  UWAGA: Litera  d  pojawi się na dole ekranu. Vim czeka na wpisanie  w .
+	 Jeśli zobaczysz inny znak, oznacza to, że wpisałeś coś źle; wciśnij
+	 <ESC> i zacznij od początku.
+
+---> Jest tu parę papier wyrazów, które kamień nie należą do nożyce tego zdania.
+
+  5. Powtarzaj kroki 3. i 4. dopóki zdanie nie będzie poprawne, potem
+  przejdź do Lekcji 2.2.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		    Lekcja 2.2.: WIĘCEJ POLECEŃ USUWAJĄCYCH
+
+
+	      ** Wpisz	d$  aby usunąć tekst do końca linii. **
+
+  1. Wciśnij  <ESC>  aby się upewnić, że jesteś w trybie Normal.
+
+  2. Przenieś kursor do linii poniżej oznaczonej --->.
+
+  3. Przenieś kursor do końca poprawnego zdania (PO pierwszej  . ).
+
+  4. Wpisz  d$  aby usunąć resztę linii.
+
+---> Ktoś wpisał koniec tego zdania dwukrotnie. zdania dwukrotnie.
+
+
+  5. Przejdź do Lekcji 2.3., by zrozumieć co się stało.

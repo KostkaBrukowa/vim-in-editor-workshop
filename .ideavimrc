@@ -1,0 +1,35 @@
+set highlightedyank
+let g:highlightedyank_highlight_duration = "300"
+let g:highlightedyank_highlight_color = "rgba(90, 109, 111, 255)"
+
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+set incsearch     " show search matches as you type
+set hlsearch      " show search matches as you type
+set number
+set clipboard
+
+" faster movement to end and beggining of the line
+noremap H ^
+noremap L $
+
+" faster movement to down and up
+noremap J 9j
+noremap K 9k
+
+" J is taken by movement down so we remap it to <C-j>
+nnoremap <C-j> J
+
+" yank until the end of the line with Y
+nnoremap Y y$
+
+" make paste not override the register
+vnoremap p "_dP
+
+let mapleader = " "
+" example leader mappings for git commands
+nmap <leader>gb <Action>(Git.Branches)
+nmap <leader>gl <Action>(Git.Pull)
+nmap <leader>gm <Action>(Git.Merge)

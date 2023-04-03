@@ -1,0 +1,47 @@
+Lekcja 4.1.: Textobjects
+
+Textobject to jakaś część tekstu. Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych:
+- `"` – double quoted string - ("someVeryLongTextToProveThatYouCanEasilySelectVeryLongText")
+- `'` – single quoted string - ('someVeryLongTextToProveThatYouCanEasilySelectVeryLongText')
+- ``` – back quoted string - (`someVeryLongTextToProveThatYouCanEasilySelectVeryLongText`)
+- `(` – a parenthesized block - (someVeryLongTextToProveThatYouCanEasilySelectVeryLongText)
+- `[` – a bracketed block - [someVeryLongTextToProveThatYouCanEasilySelectVeryLongText]
+- `{` – a brace block - {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
+- `w` – word (includes text between white space)
+- `t` – a single tag - <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
+
+Operacje na textobjectach wykonujemy za pomocą znaków `a` (around) oraz `i` (inside).
+Czyli np. 
+- żeby zaznaczyć wewnątrz słowa (inner word) - `viw` (visual inside word)
+- żeby zaznaczyć wewnątrz nawiasów okrągłych - `vi(` (visual inside ())
+- żeby zaznaczyć wewnątrz klamer - `vi{` (visual inside {})
+
+```
+const marketplace = 'pl-PL';
+const currency = getCurrencySymbol(marketplace)
+
+export function getCurrencySymbol(): string {
+  const currency = getCurrencyFromStore();
+
+  return (0)
+    .toLocaleString(_currentLanguage, {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+      locale: 'pl-PL' // <---------------------- zamień i usuń komentarz
+    })
+    .replace(/\d/g, '')
+    .trim();
+}
+```
+
+
+```
+const HomePage: React.FC = () => {
+  const title = i18n('Witaj w Allegro Ads!'); // <------ inline the variable into return statement
+
+  return title;
+};
+
+```

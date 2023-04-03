@@ -1,0 +1,166 @@
+Lekcja 5.1.: Motion and normal mode actions
+-----
+
+W poprzedniej lekcji nauczyliśmy się czym są textobjects. Tym razem poznamy coś
+co nazywa się `motions`. Motions to są po prostu komendy dzięki którym możemy się 
+poruszać czyli: `w`, `b` `j` `k` itp. Zapamiętaj że ich nazwa w vim to `motions`.
+
+-----
+
+Wykonywanie akcji w normal mode
+
+Przykład
+```
+function foo(parameter1, parameter2) {
+    const test  = 10;
+    return test;
+}
+```
+
+Podstawowy wzór na wykonywanie akcji w normal mode to:
+<number><command><text object or motion>
+
+Przykłady:
+- `diw` (delete inner word)
+- `di(` (delete inner `(` )
+- `da{` (delete around `{` )
+- `dit` (delete inside tag )
+itp. Dzięki temu będziecie trochę szybciej wykonywać dane akcje i 
+te akcje będą `dot-repeatable`.
+
+
+```
+const marketplace = 'pl-PL';
+const currency = getCurrencySymbol(marketplace)
+
+export function getCurrencySymbol(marketplace): string {
+  const currency = getCurrencyFromStore();
+
+  return (0)
+    .toLocaleString(_currentLanguage, {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+      locale: marketplace // <---------------------- zamień i usuń komentarz
+    })
+    .replace(/\d/g, '')
+    .trim();
+}
+```
+
+Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
+```
+const currency = (market) => {
+    return marketToCurrency(market);
+};
+
+export const Input: FunctionComponent<Props> = ({
+  value,
+  buttonAfter,
+  clear,
+  hint,
+  errorText,
+  invalid,
+  className,
+  onClear,
+  onFocus,
+  onBlur,
+  onChange,
+  placeholder,
+  type,
+  disabled,
+  autoFocus,
+  errorsVisibleOnFocus = false,
+  errorsSpacing = false,
+}) => {
+  const [localValue, setLocalValue] = useState(getValue(value));
+  const [focused, setFocused] = useState(false);
+
+  const handleChange = (val: string | number): void => {
+    const parsedValue = parseValue(val, currency());
+
+    setLocalValue(parsedValue);
+    onChange?.(parsedValue);
+  };
+
+  const fieldProps = {
+    value: localValue,
+    placeholder,
+    onChange: handleChange,
+    onBlur: handleBlur,
+    onFocus: handleFocus,
+    unit,
+    disabled,
+    autoFocus,
+    valid: !invalidInput,
+    currency: currency()
+    pristine: false,
+    className: style.field,
+    unitClassName: style.unit,
+    inputProps: { type, maxLength: currency ? CURRENCY_MAX_LENGTH : null },
+  };
+
+  return (
+    <div className={className}>
+      {unit ? <LocalCurrencyField {...fieldProps} /> : <Field {...fieldProps} />}
+      {hint && (typeof hint === 'string' ? <Hint message={hint} /> : <Hint>{hint}</Hint>)}
+      <ErrorMessage className={style.error(invalidInput, errorsSpacing)} message={errorText} currency={currency()}/>
+    </div>
+  );
+};
+
+```
+
+-----
+Operacje na całych liniach w normal mode
+W visual mode mieliśmy skrót `V` który zawsze zaznaczał całe linie. W normal mode też mamy odpowiednik 
+operowania na całych liniach.
+Są dwa główne skróty o których powinniście pamiętać:
+- dd (delete entire line)
+- yy (yank entire line)
+
+Zadanie:
+- usunąć unusedVariables
+- przenieść wywołanie metody `pageViewed` do useEffect
+- inline title do komponentu `ModuleHeader`
+```
+const HomePage: React.FC = () => {
+  const unusedVariable1 = 1;
+  const { type } = useHomePageUserType();
+  const location = useLocation();
+  const unusedVariable2 = 2;
+  const unusedVariable3 = 3;
+  const unusedVariable4 = 4;
+  const unusedVariable5 = 5;
+  const { marketplaceId } = useSelector(selectMarketplace);
+
+  const title = i18n('Witaj w Allegro Ads!'); // <------ inline the variable into ModuleHeader
+
+  HomePageEvents.pageViewed(location, marketplaceId, type);
+  useEffect(() => {
+  }, [location, marketplaceId, type]);
+
+  return (
+    <>
+      <ModuleHeader>{title}</ModuleHeader>
+      <MarketSwitcher className={style.marketSwitcher} />
+      <HomePageContent />
+    </>
+  );
+};
+
+```
+
+-----
+Komendy w normal mode z użyciem `motions`.
+Teraz używaliśmy komendy razem z text objectami. Da się też używać ich razem z motionami np.
+- dj (delete )
+
+Możemy robić nasze rzeczy jeszcze szybciej
+
+Spróbujcie wykonać następujące zadanie:
+Zamieńcie wszystkie stringi
+```
+
+```

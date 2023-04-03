@@ -39,9 +39,89 @@ export function getCurrencySymbol(): string {
 
 ```
 const HomePage: React.FC = () => {
-  const title = i18n('Witaj w Allegro Ads!'); // <------ inline the variable into return statement
-
-  return title;
+  return <Grid>
+      <Column size="12" xlSize="8" className={style.mainColumn}>
+        Copy this text to every column in the grid
+      </Column>
+      <Column size="12" xlSize="4">
+        <HomePageArticleTile />
+      </Column>
+      <Column size="12" lgSize="4">
+        <HomePageCommonTile
+          icon="illustrationSmallChart"
+          title={i18n('Allegro Ads w Czechach')}
+          description={i18n(
+            'Poznaj dostępne formy reklamy, z których możesz skorzystać na allegro.cz.',
+          )}
+          buttonText={i18n('Przejdź do artykułu')}
+          buttonLink="https://allegro.pl/dla-sprzedajacych/allegro-ads-na-rynku-czeskim-K6YroKlvdsB"
+        />
+      </Column>
+      <Column size="12" lgSize="4">
+        <HomePageCommonTile
+          icon="illustrationSmallAllegroCommunity"
+          title={i18n('Kurs online w Akademii Allegro')}
+          description={i18n(
+            'Poszerzaj wiedzę o Allegro Ads za pomocą bezpłatnego kursu online w Akademii Allegro.',
+          )}
+          buttonText={i18n('Przejdź do kursu')}
+          buttonLink="https://allegro.pl/academy/increasing-sales-with-allegro-ads"
+        />
+      </Column>
+      {/* DELETE COLUMN BELOW */}
+      <Column size="12" lgSize="4">
+        <HomePageCommonTile
+          icon="illustrationSmallUserConnected"
+          title={i18n('Potrzebujesz pomocy?')}
+          description={i18n(
+            'Poznaj odpowiedzi na najpopularniejsze pytania dotyczące działania Allegro Ads.',
+          )}
+          buttonText={i18n('Przejdź do Allegro Pomoc')}
+          buttonLink="https://allegro.pl/pomoc/dla-sprzedajacych/allegro-ads"
+        />
+      </Column>
+    </Grid>
 };
 
+```
+
+I trochę JSON-a
+Zadania:
+1. Usuń wszystko w tablicy z klucza `extends`
+2. Zmień nazwę klucza `blablabla` na `parser`
+3. Usuń cały klucz `parserOptions`
+4. Usuń wszystkie elementy w tablicy `plugins`
+5. Zamień wartość klucza ze stringa na `{}`
+```JSON
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "@allegro/opbox",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:testing-library/react",
+    "prettier"
+  ],
+  "blablabla": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true,
+      "legacyDecorators": true
+    }
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "testing-library",
+    "simple-import-sort",
+    "@allegro/teal",
+    "jest-dom",
+    "jest"
+  ],
+  "rules": "REPLACE THIS STRING TO AN EMPTY OBJECT",
+}
 ```

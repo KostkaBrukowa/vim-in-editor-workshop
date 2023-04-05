@@ -18,20 +18,24 @@ Lekcja 3.1.: Kopiowanie usuwanie wklejanie
 
 Gratulacje! Właśnie skopiowałeś i wkleiłeś text.
 
+Ćwiczenie
+Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
+Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
+do parametrów
+
 ```
 const marketplace = 'pl-PL';
-const currency = getCurrencySymbol(marketplace)
+const currency = 'zł';
+const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
 
 export function getCurrencySymbol(): string {
-  const currency = getCurrencyFromStore();
-
   return (0)
     .toLocaleString(_currentLanguage, {
       style: 'currency',
-      currency,
+      currency: 'zł', // <---------------------- zamień stringa na parametr i usuń komentarz
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
-      locale: 'pl-PL' // <---------------------- zamień i usuń komentarz
+      locale: 'pl-PL' // <---------------------- zamień stringa na parametr i usuń komentarz
     })
     .replace(/\d/g, '')
     .trim();
@@ -46,49 +50,26 @@ I tyle tekst zostanie zasąpiony
 
 ```
 const marketplace = 'pl-PL';
-const currency = getCurrencySymbol(marketplace)
+const currency = 'zł';
+const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
 
-export function getCurrencySymbol(marketplace: string): string {
-  const currency = getCurrencyFromStore();
-
+export function getCurrencySymbol(marketplace: string, currency: string): string {
   return (0)
     .toLocaleString(_currentLanguage, {
       style: 'currency',
-      currency,
+      currency: 'zł', // <---------------------- wklej zastępując zaznaczony tekst
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
-      locale: 'pl-PL' 
+      locale: 'pl-PL' // <---------------------- wklej zastępując zaznaczony tekst
     })
     .replace(/\d/g, '')
     .trim();
 }
 ```
 
-Przenoszenie:
+UWAGA!
 Gdy usuniecie tekst on automatycznie zostaje skopiowany! Należy na to bardzo uważać
 żeby to co znalazło się w waszym schowku nie zostało nadpisane przez usuwanie.
-
-Zadanie: zastąp `locale: 'pl-PL'` na `locale: marketplace` i usuń linię `const locale = 'pl-PL'`
-```
-const marketplace = 'pl-PL';
-const currency = getCurrencySymbol(marketplace)
-
-export function getCurrencySymbol(marketplace: string): string {
-  const locale = 'pl-PL'
-  const currency = getCurrencyFromStore();
-
-  return (0)
-    .toLocaleString(_currentLanguage, {
-      style: 'currency',
-      currency,
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-      locale: 'pl-PL' 
-    })
-    .replace(/\d/g, '')
-    .trim();
-}
-```
 
 Visual line mode:
 Gdy wciśniemy przycisk `V` zaczniemy zaznaczać całe linie. Dzięki temu będziemy mogli
@@ -129,7 +110,6 @@ const HomePage: React.FC = () => {
 
 Różnica między `p` a `P`.
 `p` wkleja przed kursorem, a `P` wkleja za kursorem.
-
 
 ```
 const ten = 10;

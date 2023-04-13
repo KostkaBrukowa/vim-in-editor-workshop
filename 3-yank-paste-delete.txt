@@ -121,5 +121,11 @@ fifteen = 15;
 function foo(firstArgument, ) {}
 ```
 
+x - `x` usuwa literę pod kursorem
+
+TODO
+```
+```
+
 
 Zadanie podsumowywujące

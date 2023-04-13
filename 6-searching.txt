@@ -1,0 +1,77 @@
+Lekcja 6.1.: wyszukiwanie
+
+Ważnym elementem poruszania się po kodzie jest wyszukiwanie fraz,
+zmiennych czy po prostu tekstu. Aby wyszukać dane słowo w dokumencie
+wciskamy przycisk 
+`/` 
+lub
+`?`. 
+`/` będzie wyszukiwało nam frazy od kursora w dół a
+`?` od kursora w górę. Po wciśnięciu pojawi się nam w lewym dolnym rogu
+input do którego od razu będziemy mogli wpisywać wyszukiwaną frazę.
+Wyszukane frazy zostaną podkreślone na inny kolor. Aby przejść do następnego
+wyszukania wciskamy przycisk `n` (next) lub `N` (previous).
+
+Ćwiczenie
+Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
+```
+const currency = 'zł';
+
+export const Input: FunctionComponent<Props> = ({
+  value,
+  buttonAfter,
+  clear,
+  hint,
+  errorText,
+  invalid,
+  className,
+  onClear,
+  onFocus,
+  onBlur,
+  onChange,
+  placeholder,
+  type,
+  disabled,
+  autoFocus,
+  errorsVisibleOnFocus = false,
+  errorsSpacing = false,
+}) => {
+  const [localValue, setLocalValue] = useState(getValue(value));
+  const [focused, setFocused] = useState(false);
+
+  const handleChange = (val: string | number): void => {
+    const parsedValue = parseValue(val, currency);
+
+    setLocalValue(parsedValue);
+    onChange?.(parsedValue);
+  };
+
+  const fieldProps = {
+    value: localValue,
+    placeholder,
+    onChange: handleChange,
+    onBlur: handleBlur,
+    onFocus: handleFocus,
+    unit,
+    disabled,
+    autoFocus,
+    valid: !invalidInput,
+    currency: currency()
+    pristine: false,
+    className: style.field,
+    unitClassName: style.unit,
+    inputProps: { type, maxLength: currency ? CURRENCY_MAX_LENGTH : null },
+  };
+
+  return (
+    <div className={className}>
+      {unit ? <LocalCurrencyField {...fieldProps} /> : <Field {...fieldProps} />}
+      {hint && (typeof hint === 'string' ? <Hint message={hint} /> : <Hint>{hint}</Hint>)}
+      <ErrorMessage className={style.error(invalidInput, errorsSpacing)} message={errorText} currency={currency()}/>
+    </div>
+  );
+};
+
+```
+
+

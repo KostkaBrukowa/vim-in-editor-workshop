@@ -7,15 +7,14 @@ poruszać czyli: `w`, `b` `j` `k` itp. Zapamiętaj że ich nazwa w vim to `motio
 
 -----
 
-Wykonywanie akcji w normal mode
+Wykonywanie akcji w normal mode.
+Zamiast używania visual mode, możemy wykonać akcję od razu na textobject
+albo na motion.
+Aby to zrobić wyobraź sobie że chcesz wykonać akcję w visual mode np. `vi(d`
+a następnie zamień `v` na akcję - w naszym przykładzie `d`.
 
-Przykład
-```
-function foo(parameter1, parameter2) {
-    const test  = 10;
-    return test;
-}
-```
+`vi(d` -> `di(`
+`vi"y` -> `yi"`
 
 Podstawowy wzór na wykonywanie akcji w normal mode to:
 <number><command><text object or motion>
@@ -25,10 +24,21 @@ Przykłady:
 - `di(` (delete inner `(` )
 - `da{` (delete around `{` )
 - `dit` (delete inside tag )
+- `dw` (delete word)
+- `dj` (delete down)
+- `de` (delete end)
 itp. Dzięki temu będziecie trochę szybciej wykonywać dane akcje i 
-te akcje będą `dot-repeatable`.
+te akcje będą `dot-repeatable` (o tym później).
 
+Przykład
+```
+function foo(parameter1, parameter2) {
+    const test  = 10;
+    return test;
+}
+```
 
+Ćwiczenia
 ```
 const marketplace = 'pl-PL';
 const currency = getCurrencySymbol(marketplace)
@@ -151,16 +161,4 @@ const HomePage: React.FC = () => {
 };
 
 ```
-
 -----
-Komendy w normal mode z użyciem `motions`.
-Teraz używaliśmy komendy razem z text objectami. Da się też używać ich razem z motionami np.
-- dj (delete )
-
-Możemy robić nasze rzeczy jeszcze szybciej
-
-Spróbujcie wykonać następujące zadanie:
-Zamieńcie wszystkie stringi
-```
-
-```

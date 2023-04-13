@@ -1,47 +1,60 @@
 Lekcja 4.1.: Textobjects
 
-Textobject to jakaś część tekstu. Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych:
-- `"` – double quoted string - ("someVeryLongTextToProveThatYouCanEasilySelectVeryLongText")
-- `'` – single quoted string - ('someVeryLongTextToProveThatYouCanEasilySelectVeryLongText')
-- ``` – back quoted string - (`someVeryLongTextToProveThatYouCanEasilySelectVeryLongText`)
-- `(` – a parenthesized block - (someVeryLongTextToProveThatYouCanEasilySelectVeryLongText)
-- `[` – a bracketed block - [someVeryLongTextToProveThatYouCanEasilySelectVeryLongText]
-- `{` – a brace block - {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
+Textobject to część tekstu. Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych typów:
+- `"` – double quoted string
+- `'` – single quoted string
+- ``` – back quoted string
+- `(` – parenthesized block
+- `[` – bracketed block
+- `{` – brace block
 - `w` – word (includes text between white space)
-- `t` – a single tag - <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
+- `t` – single tag
 
-Operacje na textobjectach wykonujemy za pomocą znaków `a` (around) oraz `i` (inside).
+Cały textobject składa się qualifiera (`a` (around) oraz `i` (inside)) oraz typu textobjectu.
 Czyli np. 
 - żeby zaznaczyć wewnątrz słowa (inner word) - `viw` (visual inside word)
-- żeby zaznaczyć wewnątrz nawiasów okrągłych - `vi(` (visual inside ())
-- żeby zaznaczyć wewnątrz klamer - `vi{` (visual inside {})
+- żeby zaznaczyć wewnątrz nawiasów okrągłych - `vi(` (visual inside ()) (someVeryLongTextToProveThatYouCanEasilySelectVeryLongText)
+- żeby zaznaczyć wewnątrz klamer - `vi{` (visual inside {}) {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
+- żeby zaznaczyć wewnątrz taga - `vit` (visual inside {}) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
+
+- żeby zaznaczyć cały cudzysłów - `va"` (visual inside ()) ("someVeryLongTextToProveThatYouCanEasilySelectVeryLongText")
+- żeby zaznaczyć całe klamry - `va{` (visual inside {}) {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
+- żeby zaznaczyć cały tag - `vat` (visual inside {}) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
+- żeby zaznaczyć wewnątrz słowa (around word) - `vaw` (visual inside word)
+
+Ćwiczenie
+Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
+Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
+do parametrów
 
 ```
 const marketplace = 'pl-PL';
-const currency = getCurrencySymbol(marketplace)
+const currency = 'zł';
+const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
 
 export function getCurrencySymbol(): string {
-  const currency = getCurrencyFromStore();
-
   return (0)
     .toLocaleString(_currentLanguage, {
       style: 'currency',
-      currency,
+      currency: 'zł', // <---------------------- zamień stringa na parametr i usuń komentarz
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
-      locale: 'pl-PL' // <---------------------- zamień i usuń komentarz
+      locale: 'pl-PL' // <---------------------- zamień stringa na parametr i usuń komentarz
     })
     .replace(/\d/g, '')
     .trim();
 }
 ```
 
-
+Skopiuj zawartość pierwszej kolumny do każdej kolumny w gridzie zmieniając numer na końcu
+na numer kolumny.
+Usuń całą ostatnią kolumnę
 ```
 const HomePage: React.FC = () => {
   return <Grid>
       <Column size="12" xlSize="8" className={style.mainColumn}>
-        Copy this text to every column in the grid
+        1. Copy this text to every column in the grid and change number.
+        This text should be copied to at the same time
       </Column>
       <Column size="12" xlSize="4">
         <HomePageArticleTile />
@@ -84,6 +97,8 @@ const HomePage: React.FC = () => {
 };
 
 ```
+
+TODO tu zadanie z funkcjami i wypełnianiem parametrów
 
 I trochę JSON-a
 Zadania:

@@ -121,4 +121,10 @@ fifteen = 15;
 function foo(firstArgument, ) {}
 ```
 
+📋 Rejestr VIM-owy i rejestr globalny.
+Używając vim-owych pluginów zazwyczaj dostajemy w prezencie dodatkowy schowek. Ten schowek przechowuje
+wszystkie rzeczy które skopiowaliśmy w instancji pluginu. Czyli jeżeli teraz skopiujemy całą linię `yy` (yank line)
+używając vimowego skrótu ten skopiowany tekst znajdzie się w schowku pluginu. wykonanie skrótu systemowego
+`cmd+v` nie wklei tej linii. Aby skopiować coś do schowka systemowego używamy po prostu `cmd+c` a żeby wkleić `cmd+v`.
+
 Zadanie podsumowywujące

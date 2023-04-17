@@ -221,8 +221,3 @@ Pro tip!
 Np. `9j` to jest motion, czyli możemy też usuwać lub kopiować używając tego motiona.
 Takie komendy jak `y2j` skopiują dwie całe linie (plus aktualną w dół `y3k` skopiuje linie w górę (plus aktualną) itp
 
-📋 5. Rejestr VIM-owy i rejestr globalny.
-Używając vim-owych pluginów zazwyczaj dostajemy w prezencie dodatkowy schowek. Ten schowek przechowuje
-wszystkie rzeczy które skopiowaliśmy w instancji pluginu. Czyli jeżeli teraz skopiujemy całą linię `yy` (yank line)
-używając vimowego skrótu ten skopiowany tekst znajdzie się w schowku pluginu. wykonanie skrótu systemowego
-`cmd+v` nie wklei tej linii. Aby skopiować coś do schowka systemowego używamy po prostu `cmd+c` a żeby wkleić `cmd+v`.

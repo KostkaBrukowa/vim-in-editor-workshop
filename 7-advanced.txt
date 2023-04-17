@@ -1,10 +1,10 @@
-Lekcja 7.1.: Zaawansowane rzeczy
+📋 Lekcja 7.1.: Zaawansowane rzeczy
 
 Do tej pory nauczyliśmy się wszystkiego co potrzebne nam jest
 do normalnej pracy (a nawet trochę więcej). W tej lekcji pokażę kilka technik
 których używam na codzień i przyspieszają pracę, ale nie są niezbędne do używania vim motions.
 
-1. `f` `t` `;` `,`
+📋 1. `f` `t` `;` `,`
 `f` oraz `t` pozwalają nam szybko poruszać się kursorem w ramach jednej 
 linii. 
 
@@ -19,7 +19,7 @@ Uwaga!
 `f<char>` to jest `motion`, więc możemy używać z nim normalnych manipulacji tekstem.
 Np. możemy wykonać `dt)` (delete till `)` ) czyli usunąć wszystko do zamkniętego nawiasu
 
-Ćwiczenie
+⚡️ Ćwiczenie:
 ```
 1. () - - - - - - - - - (move this to other parenthesis, but not this)
 
@@ -40,7 +40,7 @@ czasem szybiej jest po prostu użyć `w`, dlatego najefektywniejsze wyszukiwanie
 tymi znakami będzie wtedy gdy będziemy szukać znaków specjalnych `(` `{` itp, bo zazwyczaj
 nie ma ich więcej niż jeden per linia.
 
-2. `c`
+📋 2. `c`
 Komenda `change` pozwala nam na szybsze zmienianie części tekstu. `c` jest zamiennikiem `d`, 
 czyli w każdej komendzie gdzie używaliśmy `d` możemy zamiast tego użyć `c`. Różnica między `d` a `c`
 polega na tym, że `c` od razu wchodzi do insert mode po wykonaniu akcji.
@@ -54,8 +54,8 @@ bez wciskania klawisza `i`, czyli: `ciw` i wpisać string. Oszczędzamy przez to
 const foo: string = 'string';
 ```
 
-Ćwiczenie:
-
+⚡️ Ćwiczenie:
+Zamień tekst zgodnie z komentarzami
 
 ```
 // zamień wartość stringa na `easy to learn`
@@ -87,7 +87,7 @@ Mamy też podobne klucze: `s` i `r`.
 - `r<char>` (replace) - zastępuje aktualny znak pod kursorem znakiem `<char>`
 które też zmniejszają wymaganą liczbę wciśniętych przycisków o 1.
 
-3. `.` - kropka
+📋 3. `.` - kropka
 Bardzo potężny operator. Pozwala nam wykonać ponownie ostatnią akcję. Wspomniałem 
 wsześniej o tym że niektóre akcje mogą być `dot-repeatable`. I tu nauczymy się co to znaczy.
 Powiedzmy że chcemy zamienić wszystkie poniższe stringi na tę samą wartość `10`. Możemy wchodzić 
@@ -108,7 +108,7 @@ Uwaga!
 Akcje wykonane w visual mode nie są dot-repeatable. Dlatego też `ciw`, `dt(` itp. są
 bardzo pożyteczne bo możemy je łatwo powtarzać
 
-Ćwiczenie
+⚡️ Ćwiczenie:
 
 Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
 ```
@@ -173,7 +173,7 @@ export const Input: FunctionComponent<Props> = ({
 
 ```
 
-4. Relative jumps
+📋 4. Relative jumps
 Ciekawym sposobem na poruszanie się w górę i w dół po dokumencie jest technika
 relative jumps. Relative jumps pozwala nam ruszyć kursor o dokładną liczbę linii
 w górę lub w dół. Robimy to według wzoru.
@@ -185,8 +185,9 @@ W konfiguracji została włączona opcja relative numbers. Zamienia ona wszystki
 poniżej i powyżej na relatywną liczbę linii od aktualnej linii. Oznacza to że jeżeli chcemy
 przejść do danej linii musimy po prostu wpisać linię która jest wpisana w danej linii.
 
-Ćwiczenie
+⚡️ Ćwiczenie:
 Przejdź po liczbach w kolejność od 0 do 9
+
 ```
 0
 
@@ -220,7 +221,7 @@ Pro tip!
 Np. `9j` to jest motion, czyli możemy też usuwać lub kopiować używając tego motiona.
 Takie komendy jak `y2j` skopiują dwie całe linie (plus aktualną w dół `y3k` skopiuje linie w górę (plus aktualną) itp
 
-5. Rejestr VIM-owy i rejestr globalny.
+📋 5. Rejestr VIM-owy i rejestr globalny.
 Używając vim-owych pluginów zazwyczaj dostajemy w prezencie dodatkowy schowek. Ten schowek przechowuje
 wszystkie rzeczy które skopiowaliśmy w instancji pluginu. Czyli jeżeli teraz skopiujemy całą linię `yy` (yank line)
 używając vimowego skrótu ten skopiowany tekst znajdzie się w schowku pluginu. wykonanie skrótu systemowego

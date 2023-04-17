@@ -1,4 +1,4 @@
-2. Tryby w VIM
+📋 2. Tryby w VIM
 
 Normal mode
 Normal mode to domyślny tryb w Vim.
@@ -25,7 +25,7 @@ Aby przejść do insert mode, naciśnij klawisz `i`, `a` lub `A` z normal mode.
 Gdy jesteś w insert mode, możesz wprowadzać nowy tekst bezpośrednio do dokumentu.
 Możesz użyć klawisza Esc, aby wyjść z insert mode i powrócić do normal mode.
 
-Ćwiczenie:
+⚡️ Ćwiczenie:
 
 Wpisz tekst w odpowiednie miejsca wskazane przez komentarze. Aby wejść do 
 insert mode wciśnij `i` albo `a`. Gdy wpiszesz opdowiedni tekst wyjdź z insert 

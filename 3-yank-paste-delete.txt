@@ -1,4 +1,4 @@
-Lekcja 3.1.: Kopiowanie usuwanie wklejanie
+📋 Lekcja 3.1.: Kopiowanie usuwanie wklejanie
 
 *****
 
@@ -18,7 +18,7 @@ Lekcja 3.1.: Kopiowanie usuwanie wklejanie
 
 Gratulacje! Właśnie skopiowałeś i wkleiłeś text.
 
-Ćwiczenie
+⚡️ Ćwiczenie:
 Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
 Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
 do parametrów
@@ -42,7 +42,7 @@ export function getCurrencySymbol(): string {
 }
 ```
 
-Pro tip: możecie skopiowany text zastąpić zaznaczone słowo. Aby to zrobić:
+📋 Pro tip: możecie skopiowany text zastąpić zaznaczone słowo. Aby to zrobić:
 1. Skopiujcie zaznaczony tekst.
 2. Zaznaczcie tekst który chcecie zasąpić
 3. Wciśnijcie `p`
@@ -67,7 +67,7 @@ export function getCurrencySymbol(marketplace: string, currency: string): string
 }
 ```
 
-UWAGA!
+📋 UWAGA!
 Gdy usuniecie tekst on automatycznie zostaje skopiowany! Należy na to bardzo uważać
 żeby to co znalazło się w waszym schowku nie zostało nadpisane przez usuwanie.
 
@@ -75,7 +75,7 @@ Visual line mode:
 Gdy wciśniemy przycisk `V` zaczniemy zaznaczać całe linie. Dzięki temu będziemy mogli
 w łatwy i szybki sposób usuwać całe linie, kopiować całe linie, usuwać całe bloki linii.
 
-Zadanie:
+⚡️ Ćwiczenie:
 - usunąć unusedVariables
 - przenieść wywołanie metody `pageViewed` do useEffect
 - inline title do komponentu `ModuleHeader`
@@ -108,7 +108,7 @@ const HomePage: React.FC = () => {
 
 ```
 
-Różnica między `p` a `P`.
+📋 Różnica między `p` a `P`.
 `p` wkleja przed kursorem, a `P` wkleja za kursorem.
 
 ```
@@ -120,12 +120,5 @@ fifteen = 15;
 
 function foo(firstArgument, ) {}
 ```
-
-x - `x` usuwa literę pod kursorem
-
-TODO
-```
-```
-
 
 Zadanie podsumowywujące

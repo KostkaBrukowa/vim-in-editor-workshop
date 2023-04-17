@@ -1,6 +1,6 @@
-		  Lekcja 1.1.: PORUSZANIE SIĘ KURSOREM
+Lekcja 1.1.: PORUSZANIE SIĘ KURSOREM
 
-       ** By wykonać ruch kursorem, wciśnij h, j, k, l jak pokazano. **
+📋 ** By wykonać ruch kursorem, wciśnij h, j, k, l jak pokazano. **
 
 	       ^
 	       k		      Wskazówka:  h jest po lewej
@@ -15,6 +15,8 @@
 Uwaga: Jeśli nie jesteś pewien czegoś, co wpisałeś, wciśnij <ESC>, by wrócić do
        trybu Normal. Wtedy powtórz polecenie.
 
+⚡️ Ćwiczenie:
+Poruszaj kursorem zaczynając od `S` a kończąc na `K`
 
 ............................................................................
 S*******.......****.........................................................
@@ -30,7 +32,7 @@ S*******.......****.........................................................
 *..............*............................................................
 ****************............................................................
 
-H, J, K, L
+📋 H, J, K, L
 Używając vim motions wielkość liter ma znaczenie. j robi coś innego i J robi coś innego.
 - H - przechodzi na początek linii
 - J - przeskakuje kursorem 10 linii w górę
@@ -38,8 +40,8 @@ Używając vim motions wielkość liter ma znaczenie. j robi coś innego i J rob
 - L - przechodzi na koniec linii
 
 
-Ćwiczenie:
-Przejdź kursorem po literach w kolejności alfabetycznej
+⚡️ Ćwiczenie:
+Przejdź kursorem po literach w kolejności alfabetycznej zaczynając od `S` i kończąc na `K`
 ............................................................................
 S..........................................................................a
 K...........................................................................
@@ -74,7 +76,7 @@ o..........................................................................p
 ............................................................................
 
 
-w, b, e
+📋 w, b, e
 Kolejnymi skrótami które będą nam bardzo pomocne w poruszaniu się po jednej linii to:
 - w (word) - rusz kursorem w prawą stronę do następnego słowa (lub znaku specjalnego)
 - b (back) - rusz kursorem w lewą stronę do początku poprzedniego słowa jeżeli 
@@ -82,7 +84,7 @@ Kolejnymi skrótami które będą nam bardzo pomocne w poruszaniu się po jednej
 - e (end) - rusz kursorem w prawą stronę do końca aktualnego słowa jeżeli 
   nie jesteśmy na końcu aktualnego lub do końca następnego gdy jesteśmy na końcu
 
-Ćwiczenie:
+⚡️ Ćwiczenie:
 Przejdź po kolelnych znakach `_` a jeżeli trafisz na * usuń literę ('x') i cofnij się o dwa słowa.
 Musisz zebrać wszystkie gwiazdki!
 

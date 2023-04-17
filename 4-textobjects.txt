@@ -1,4 +1,4 @@
-Lekcja 4.1.: Textobjects
+📋 Lekcja 4.1.: Textobjects
 
 Textobject to część tekstu. Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych typów:
 - `"` – double quoted string
@@ -22,7 +22,7 @@ Czyli np.
 - żeby zaznaczyć cały tag - `vat` (visual inside {}) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
 - żeby zaznaczyć wewnątrz słowa (around word) - `vaw` (visual inside word)
 
-Ćwiczenie
+⚡️ Ćwiczenie:
 Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
 Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
 do parametrów
@@ -46,9 +46,11 @@ export function getCurrencySymbol(): string {
 }
 ```
 
+⚡️ Ćwiczenie:
 Skopiuj zawartość pierwszej kolumny do każdej kolumny w gridzie zmieniając numer na końcu
 na numer kolumny.
 Usuń całą ostatnią kolumnę
+
 ```
 const HomePage: React.FC = () => {
   return <Grid>
@@ -100,8 +102,10 @@ const HomePage: React.FC = () => {
 
 TODO tu zadanie z funkcjami i wypełnianiem parametrów
 
+⚡️ Ćwiczenie:
+
 I trochę JSON-a
-Zadania:
+
 1. Usuń wszystko w tablicy z klucza `extends`
 2. Zmień nazwę klucza `blablabla` na `parser`
 3. Usuń cały klucz `parserOptions`

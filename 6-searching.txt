@@ -1,4 +1,4 @@
-Lekcja 6.1.: wyszukiwanie
+📋 Lekcja 6.1.: wyszukiwanie
 
 Ważnym elementem poruszania się po kodzie jest wyszukiwanie fraz,
 zmiennych czy po prostu tekstu. Aby wyszukać dane słowo w dokumencie
@@ -24,11 +24,12 @@ lub
 - `/xxx<enter>`
 wtedy podświetlenie zniknie
 
-Ćwiczenie:
+⚡️ Ćwiczenie:
+
 1. Ile razy w poniższym tekscie znajdują się dane słowa:
-- [lorem]: 8
-- [dolor]: 5
-- [in]: 10
+- [lorem]: _
+- [dolor]: _
+- [in]: _
 
 2. Zamień wszystkie powyższe słowa na ich palindromy:
 - lorem -> merol
@@ -125,9 +126,9 @@ export const Input: FunctionComponent<Props> = ({
 };
 
 ```
-(pro tip: jeżeli najedziecie na słowo i wciśniecie `*` lub `#` od razu zacznie wam się wyszukiwać słowo pod kursorem)
+📋 (pro tip: jeżeli najedziecie na słowo i wciśniecie `*` lub `#` od razu zacznie wam się wyszukiwać słowo pod kursorem)
 
-Kolejnym pomocnym narzędziem w wyszukiwaniu jest znak `%`. Przesuwa on nasz kursor na znak
+📋 Kolejnym pomocnym narzędziem w wyszukiwaniu jest znak `%`. Przesuwa on nasz kursor na znak
 który jest `match`-em tego na którym aktualnie się znajdujemy. Np. `match`-em `(` jest `)`,
 `{` jest `}` itd.
 

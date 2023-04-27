@@ -1,4 +1,43 @@
 {
-  "vim.normalModeKeyBindings": [
+  "vim.highlightedyank.enable": true,
+  "vim.useSystemClipboard": false,
+  "vim.hlsearch": true,
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["J"],
+      "after": ["9", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["9k"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["J"]
+    },
+    {
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"]
+    }
   ]
 }

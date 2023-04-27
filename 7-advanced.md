@@ -50,14 +50,14 @@ Jeżeli chcemy zmienić poniższy typ z `number` na string, możemy albo wykona�
 `diwi` (delete inner word, insert mode) i wpisać `string`, lub możemy to zrobić szybciej
 bez wciskania klawisza `i`, czyli: `ciw` i wpisać string. Oszczędzamy przez to jeden keystroke.
 
-```
+```ts
 const foo: string = 'string';
 ```
 
 ⚡️ Ćwiczenie:
 Zamień tekst zgodnie z komentarzami
 
-```
+```tsx
 // zamień wartość stringa na `easy to learn`
 const vimIs = 'very hard to learn'
 
@@ -95,7 +95,7 @@ do wszystkich `''` i po koleji wykonywać `ci'10` (change in '' 10). Ale jak mo�
 robilibyśmy tę samą akcję kilkukrotnie. Tu na pomoc przychodzi nam `.` (dot). Po wykonaniu pojedynczej
 akcji, możemy wcisnąć tę `.` i ta sama akcja wykona nam się ponownie. Spróbujcie
 
-```
+```ts
 const obj = {
   a: '1',
   b: '2',
@@ -111,7 +111,7 @@ bardzo pożyteczne bo możemy je łatwo powtarzać
 ⚡️ Ćwiczenie:
 
 Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
-```
+```tsx
 const currency = (market) => {
     return marketToCurrency(market);
 };

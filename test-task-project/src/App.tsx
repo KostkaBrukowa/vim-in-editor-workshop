@@ -31,7 +31,7 @@ export class CollapsedBatchEditSummary extends Component {
 
   renderTitle() {
     return (
-      <div>
+      <div className={subTitleClassNames}>
         <div className={style.inline}>
           <Type h6 tag="h2" className={style.title}>
             {this.props.title}

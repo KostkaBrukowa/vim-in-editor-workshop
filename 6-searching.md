@@ -67,7 +67,8 @@ auctor rhoncus lacus. Phasellus eget porta augue. Maecenas nec imperdiet justo.
 
 Ćwiczenie
 Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
-```
+
+```tsx
 const currency = 'zł';
 
 export const Input: FunctionComponent<Props> = ({
@@ -132,11 +133,11 @@ export const Input: FunctionComponent<Props> = ({
 który jest `match`-em tego na którym aktualnie się znajdujemy. Np. `match`-em `(` jest `)`,
 `{` jest `}` itd.
 
-Aby poćwiczyć ten znak spróbuj usunąć cały tekst we wszystkich `it`-ach w pierwszym 
+Aby poćwiczyć ten znak spróbuj usunąć całe it-y w pierwszym describe.
 `describe` używając visual mode.
 Usuń wszystko we wszystkich nawiasach w drugim describe.
 
-```
+```tsx
 describe('i18n utils', () => {
   describe('getSafeTranslation', () => {
     it('should return translation for existing key', () => {

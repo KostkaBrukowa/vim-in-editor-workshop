@@ -1,17 +1,19 @@
 📋 Lekcja 5.1.: Motion and normal mode actions
 -----
 
-W poprzedniej lekcji nauczyliśmy się czym są textobjects. Tym razem poznamy coś
+W poprzedniej lekcji nauczyliśmy się czym są textobjects. Vim posiada też coś
 co nazywa się `motions`. Motions to są po prostu komendy dzięki którym możemy się 
-poruszać czyli: `w`, `b` `j` `k` itp. Zapamiętaj że ich nazwa w vim to `motions`.
+poruszać czyli: `w`, `b` `j` `k` itp.
 
 -----
 
 Wykonywanie akcji w normal mode.
 Zamiast używania visual mode, możemy wykonać akcję od razu na textobject
 albo na motion.
-Aby to zrobić wyobraź sobie że chcesz wykonać akcję w visual mode np. `vi(d`
-a następnie zamień `v` na akcję - w naszym przykładzie `d`.
+
+Aby to zrobić 
+1. wyobraź sobie, że chcesz wykonać akcję w visual mode np. `vi(d`
+2. a następnie zamień `v` na akcję - w naszym przykładzie `d`.
 
 `vi(d` -> `di(`
 `vi"y` -> `yi"`
@@ -31,7 +33,7 @@ itp. Dzięki temu będziecie trochę szybciej wykonywać dane akcje i
 te akcje będą `dot-repeatable` (o tym później).
 
 Przykład
-```
+```tsx
 function foo(parameter1, parameter2) {
     const test  = 10;
     return test;
@@ -43,30 +45,29 @@ Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
 Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
 do parametrów
 
-```
+```tsx
 const marketplace = 'pl-PL';
-const currency = getCurrencySymbol(marketplace)
+const currency = 'zł';
+const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
 
-export function getCurrencySymbol(marketplace): string {
-  const currency = getCurrencyFromStore();
-
-  return (0)
-    .toLocaleString(_currentLanguage, {
-      style: 'currency',
-      currency,
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-      locale: marketplace // <---------------------- zamień i usuń komentarz
-    })
-    .replace(/\d/g, '')
-    .trim();
+export function getCurrencySymbol(): string {
+    return (0)
+        .toLocaleString(_currentLanguage, {
+            style: 'currency',
+            currency: 'zł', // <---------------------- zamień stringa na parametr i usuń komentarz
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+            locale: 'pl-PL' // <---------------------- zamień stringa na parametr i usuń komentarz
+        })
+        .replace(/\d/g, '')
+        .trim();
 }
 ```
 
 ⚡️ Ćwiczenie:
 
 Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
-```
+```tsx
 const currency = (market) => {
     return marketToCurrency(market);
 };
@@ -110,7 +111,7 @@ export const Input: FunctionComponent<Props> = ({
     disabled,
     autoFocus,
     valid: !invalidInput,
-    currency: currency()
+    currency: currency(),
     pristine: false,
     className: style.field,
     unitClassName: style.unit,
@@ -140,7 +141,8 @@ Są dwa główne skróty o których powinniście pamiętać:
 - usunąć unusedVariables
 - przenieść wywołanie metody `pageViewed` do useEffect
 - inline title do komponentu `ModuleHeader`
-```
+
+```tsx
 const HomePage: React.FC = () => {
   const unusedVariable1 = 1;
   const { type } = useHomePageUserType();

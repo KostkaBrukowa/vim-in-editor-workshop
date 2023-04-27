@@ -23,7 +23,7 @@ Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
 Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
 do parametrów
 
-```
+```tsx
 const marketplace = 'pl-PL';
 const currency = 'zł';
 const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
@@ -48,7 +48,7 @@ export function getCurrencySymbol(): string {
 3. Wciśnijcie `p`
 I tyle tekst zostanie zasąpiony
 
-```
+```tsx
 const marketplace = 'pl-PL';
 const currency = 'zł';
 const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
@@ -80,7 +80,7 @@ w łatwy i szybki sposób usuwać całe linie, kopiować całe linie, usuwać ca
 - przenieść wywołanie metody `pageViewed` do useEffect
 - inline title do komponentu `ModuleHeader`
 
-```
+```tsx
 const HomePage: React.FC = () => {
   const unusedVariable1 = 1;
   const { type } = useHomePageUserType();
@@ -111,7 +111,7 @@ const HomePage: React.FC = () => {
 📋 Różnica między `p` a `P`.
 `p` wkleja przed kursorem, a `P` wkleja za kursorem.
 
-```
+```ts
 const ten = 10;
 twelve = 12;
 thirteen = 13;
@@ -127,4 +127,7 @@ wszystkie rzeczy które skopiowaliśmy w instancji pluginu. Czyli jeżeli teraz 
 używając vimowego skrótu ten skopiowany tekst znajdzie się w schowku pluginu. wykonanie skrótu systemowego
 `cmd+v` nie wklei tej linii. Aby skopiować coś do schowka systemowego używamy po prostu `cmd+c` a żeby wkleić `cmd+v`.
 
-Zadanie podsumowywujące
+-------------------------------
+
+Po tej lekcji powinniście moc już normalnie wykonywać większość rzeczy związanych z edytowaniem tekstu.
+Teraz jeszcze raz zmierzymy szybkość edytowania tekstu, ale tym razem używając visual mode i vim motions.

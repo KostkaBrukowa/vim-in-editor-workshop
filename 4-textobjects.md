@@ -1,7 +1,8 @@
 📋 Lekcja 4.1.: Textobjects
 
-Textobject to część tekstu. Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych typów:
-- `"` – double quoted string
+Textobject to część tekstu.
+Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych typów:
+- `"` – double-quoted string
 - `'` – single quoted string
 - ``` – back quoted string
 - `(` – parenthesized block
@@ -12,14 +13,14 @@ Textobject to część tekstu. Vim posiada wiele typów textobject-ów. To jest 
 
 Cały textobject składa się qualifiera (`a` (around) oraz `i` (inside)) oraz typu textobjectu.
 Czyli np. 
-- żeby zaznaczyć wewnątrz słowa (inner word) - `viw` (visual inside word)
 - żeby zaznaczyć wewnątrz nawiasów okrągłych - `vi(` (visual inside ()) (someVeryLongTextToProveThatYouCanEasilySelectVeryLongText)
 - żeby zaznaczyć wewnątrz klamer - `vi{` (visual inside {}) {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
-- żeby zaznaczyć wewnątrz taga - `vit` (visual inside {}) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
+- żeby zaznaczyć wewnątrz taga - `vit` (visual inside tag) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
+- żeby zaznaczyć wewnątrz słowa (inner word) - `viw` (visual inside word)
 
-- żeby zaznaczyć cały cudzysłów - `va"` (visual inside ()) ("someVeryLongTextToProveThatYouCanEasilySelectVeryLongText")
-- żeby zaznaczyć całe klamry - `va{` (visual inside {}) {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
-- żeby zaznaczyć cały tag - `vat` (visual inside {}) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
+- żeby zaznaczyć cały cudzysłów - `va"` (visual around ()) ("someVeryLongTextToProveThatYouCanEasilySelectVeryLongText")
+- żeby zaznaczyć całe klamry - `va{` (visual around {}) {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
+- żeby zaznaczyć cały tag - `vat` (visual around tag) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
 - żeby zaznaczyć wewnątrz słowa (around word) - `vaw` (visual inside word)
 
 ⚡️ Ćwiczenie:
@@ -27,7 +28,7 @@ Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
 Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
 do parametrów
 
-```
+```tsx
 const marketplace = 'pl-PL';
 const currency = 'zł';
 const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
@@ -51,7 +52,7 @@ Skopiuj zawartość pierwszej kolumny do każdej kolumny w gridzie zmieniając n
 na numer kolumny.
 Usuń całą ostatnią kolumnę
 
-```
+```tsx
 const HomePage: React.FC = () => {
   return <Grid>
       <Column size="12" xlSize="8" className={style.mainColumn}>
@@ -100,8 +101,6 @@ const HomePage: React.FC = () => {
 
 ```
 
-TODO tu zadanie z funkcjami i wypełnianiem parametrów
-
 ⚡️ Ćwiczenie:
 
 I trochę JSON-a
@@ -111,7 +110,7 @@ I trochę JSON-a
 3. Usuń cały klucz `parserOptions`
 4. Usuń wszystkie elementy w tablicy `plugins`
 5. Zamień wartość klucza ze stringa na `{}`
-```JSON
+```json
 {
   "extends": [
     "airbnb",

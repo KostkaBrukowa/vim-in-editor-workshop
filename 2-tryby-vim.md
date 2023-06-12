@@ -42,7 +42,7 @@ const regionIntl = new Intl.DisplayNames(_currentLanguage, { type: '' });
 //                                                                 ^ - wpisz tu `region`
 
 export function trimAccentFromLocale(locale: string):
-//                                                   ^ - wpisz tu `string {}`
+//                                                   ^ - wpisz tu `string {`
   const dashIndex = locale?.indexOf('-');
 
   if (!dashIndex || dashIndex === -1) {

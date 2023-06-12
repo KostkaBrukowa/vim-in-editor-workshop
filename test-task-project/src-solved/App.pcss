@@ -1,0 +1,42 @@
+.summary {
+  padding: 20px 14px;
+
+  @media (--m-queries-lg) {
+    padding: 20px 44px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .buttons {
+      margin-top: 19px;
+    }
+  }
+
+  .inline > * {
+    display: inline-block;
+  }
+
+  .title {
+    margin-bottom: 0;
+
+    @media (--m-queries-md) {
+      margin-right: 20px;
+      margin-top: 5px;
+    }
+  }
+
+  .label {
+    margin-bottom: 4px;
+  }
+
+  .buttons {
+    text-align: right;
+
+    > button {
+      position: relative;
+    }
+  }
+}
+

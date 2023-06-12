@@ -1,7 +1,7 @@
 📋 Lekcja 6.1.: wyszukiwanie
 
 Ważnym elementem poruszania się po kodzie jest wyszukiwanie fraz,
-zmiennych czy po prostu tekstu. Aby wyszukać dane słowo w dokumencie
+zmiennych czy po prostu tekstu. Aby wyszukać dane słowo w dokumencie,
 wciskamy przycisk 
 
 `/` 
@@ -10,15 +10,15 @@ lub
 
 `/` będzie wyszukiwało nam frazy od kursora w dół a
 `?` od kursora w górę. Po wciśnięciu pojawi się nam w lewym dolnym rogu
-input do którego od razu będziemy mogli wpisywać wyszukiwaną frazę.
+input, do którego od razu będziemy mogli wpisywać wyszukiwaną frazę.
 Wyszukane frazy zostaną podkreślone na inny kolor. Aby przejść do następnego
-wyszukania wciskamy przycisk `n` (next) lub `N` (previous).
+wyszukania, wciskamy przycisk `n` (next) lub `N` (previous).
 W przygotowanej konfiguracji włączyliśmy opcję `smartcase`. Oznacza ona że jeżeli
 w wyszukiwaniu nie wpiszemy żadnej dużej litery to vim wyszuka nam tekst `case insensitive`,
 a jeżeli w wyszukiwaniu pojawi się duża litera to wyszukiwanie będzie `case sensitive`. Możecie
 spróbować wyszukać `lorem` i `Lorem` i zobaczyć różnicę.
 
-Aby usunąć podświetlenie wyszukiwanego słowa macie dwie opcje:
+Aby usunąć podświetlenie wyszukiwanego słowa, macie dwie opcje:
 - `:nohl<enter>`
 lub
 - `/xxx<enter>`
@@ -26,7 +26,7 @@ wtedy podświetlenie zniknie
 
 ⚡️ Ćwiczenie:
 
-1. Ile razy w poniższym tekscie znajdują się dane słowa:
+1. Ile razy w poniższym tekście znajdują się dane słowa:
 - [lorem]: _
 - [dolor]: _
 - [in]: _
@@ -110,7 +110,7 @@ export const Input: FunctionComponent<Props> = ({
     disabled,
     autoFocus,
     valid: !invalidInput,
-    currency: currency()
+    currency: currency(),
     pristine: false,
     className: style.field,
     unitClassName: style.unit,
@@ -129,13 +129,13 @@ export const Input: FunctionComponent<Props> = ({
 ```
 📋 (pro tip: jeżeli najedziecie na słowo i wciśniecie `*` lub `#` od razu zacznie wam się wyszukiwać słowo pod kursorem)
 
-📋 Kolejnym pomocnym narzędziem w wyszukiwaniu jest znak `%`. Przesuwa on nasz kursor na znak
-który jest `match`-em tego na którym aktualnie się znajdujemy. Np. `match`-em `(` jest `)`,
+📋 Kolejnym pomocnym narzędziem w wyszukiwaniu jest znak `%`. Przesuwa on nasz kursor na znak,
+który jest `match`-em tego, na którym aktualnie się znajdujemy. Np. `match`-em `(` jest `)`,
 `{` jest `}` itd.
 
-Aby poćwiczyć ten znak spróbuj usunąć całe it-y w pierwszym describe.
+Aby poćwiczyć ten znak, spróbuj usunąć całe it-y w pierwszym describe.
 `describe` używając visual mode.
-Usuń wszystko we wszystkich nawiasach w drugim describe.
+Usuń wszystko we wszystkich nawiasach (`{}`)w drugim describe.
 
 ```tsx
 describe('i18n utils', () => {

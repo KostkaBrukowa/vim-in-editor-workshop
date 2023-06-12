@@ -1,4 +1,4 @@
-📋 Lekcja 3.1.: Kopiowanie usuwanie wklejanie
+📋 Lekcja 3.1.: Kopiowanie usuwanie wklejanie i visual mode
 
 *****
 
@@ -9,12 +9,12 @@
 *****
 
 - Jak kopiujemy i wklejamy rzeczy?
-1. Upewnij się że jesteś w normal mode - `<esc>` lub wybrany przez ciebie skrót
+1. Upewnij się, że jesteś w normal mode - `<esc>` lub wybrany przez ciebie skrót
 2. Wciśnij przycisk `v` (wejście do visual mode)
-3. Przenieś swój kursor do ostatniego znaku który chcesz skopiować 
+3. Przenieś swój kursor do ostatniego znaku, który chcesz skopiować 
 4. Wciśnij przycisk `y` (yank)
-5. Przejdź do miejsca do którego chciałbyś wklejić skopiowany text.
-6. Wciśnij przysisk `p` (paste)
+5. Przejdź do miejsca, do którego chciałbyś wkleić skopiowany text.
+6. Wciśnij przycisk `p` (paste)
 
 Gratulacje! Właśnie skopiowałeś i wkleiłeś text.
 
@@ -44,9 +44,9 @@ export function getCurrencySymbol(): string {
 
 📋 Pro tip: możecie skopiowany text zastąpić zaznaczone słowo. Aby to zrobić:
 1. Skopiujcie zaznaczony tekst.
-2. Zaznaczcie tekst który chcecie zasąpić
+2. Zaznaczcie tekst, który chcecie zastąpić
 3. Wciśnijcie `p`
-I tyle tekst zostanie zasąpiony
+I tyle tekst zostanie zastąpiony
 
 ```tsx
 const marketplace = 'pl-PL';
@@ -68,8 +68,8 @@ export function getCurrencySymbol(marketplace: string, currency: string): string
 ```
 
 📋 UWAGA!
-Gdy usuniecie tekst on automatycznie zostaje skopiowany! Należy na to bardzo uważać
-żeby to co znalazło się w waszym schowku nie zostało nadpisane przez usuwanie.
+Gdy usuniecie tekst, on automatycznie zostaje skopiowany! Należy na to bardzo uważać,
+żeby to, co znalazło się w waszym schowku, nie zostało nadpisane przez usuwanie.
 
 Visual line mode:
 Gdy wciśniemy przycisk `V` zaczniemy zaznaczać całe linie. Dzięki temu będziemy mogli
@@ -122,10 +122,10 @@ function foo(firstArgument, ) {}
 ```
 
 📋 Rejestr VIM-owy i rejestr globalny.
-Używając vim-owych pluginów zazwyczaj dostajemy w prezencie dodatkowy schowek. Ten schowek przechowuje
-wszystkie rzeczy które skopiowaliśmy w instancji pluginu. Czyli jeżeli teraz skopiujemy całą linię `yy` (yank line)
-używając vimowego skrótu ten skopiowany tekst znajdzie się w schowku pluginu. wykonanie skrótu systemowego
-`cmd+v` nie wklei tej linii. Aby skopiować coś do schowka systemowego używamy po prostu `cmd+c` a żeby wkleić `cmd+v`.
+Używając vim-owych pluginów, zazwyczaj dostajemy w prezencie dodatkowy schowek. Ten schowek przechowuje
+wszystkie rzeczy, które skopiowaliśmy w instancji pluginu. Czyli jeżeli teraz skopiujemy całą linię `yy` (yank line)
+używając vimowego skrótu ten skopiowany tekst znajdzie się w schowku pluginu. Wykonanie skrótu systemowego
+`cmd+v` nie wklei tej linii. Aby skopiować coś do schowka systemowego, używamy po prostu `cmd+c` a żeby wkleić `cmd+v`.
 
 -------------------------------
 

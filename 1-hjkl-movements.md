@@ -16,7 +16,8 @@ Uwaga: Jeśli nie jesteś pewien czegoś, co wpisałeś, wciśnij <ESC>, by wró
        trybu Normal. Wtedy powtórz polecenie.
 
 ⚡️ Ćwiczenie:
-Poruszaj kursorem zaczynając od `S` a kończąc na `K`
+Poruszaj kursorem zaczynając od `S` a kończąc na `K`, a następnie wroć do 
+punktu startowego.
 
 ```
 ............................................................................
@@ -43,7 +44,7 @@ Używając vim motions wielkość liter ma znaczenie. j robi coś innego i J rob
 
 
 ⚡️ Ćwiczenie:
-Przejdź kursorem po literach w kolejności alfabetycznej zaczynając od `S` i kończąc na `K`
+Przejdź kursorem po literach w kolejności alfabetycznej zaczynając od `S` i kończąc na `K` (przed `K` jest `u`)
 
 ```
 ............................................................................
@@ -85,7 +86,7 @@ Kolejnymi skrótami które będą nam bardzo pomocne w poruszaniu się po jednej
 - w (word) - rusz kursorem w prawą stronę do następnego słowa (lub znaku specjalnego)
 - b (back) - rusz kursorem w lewą stronę do początku poprzedniego słowa jeżeli 
   jesteśmy na początku aktualnego lub do początku aktualnego gdy nie jesteśmy na początku
-- e (end) - rusz kursorem w prawą stronę do końca aktualnego słowa jeżeli 
+- e (end of a word) - rusz kursorem w prawą stronę do końca aktualnego słowa jeżeli 
   nie jesteśmy na końcu aktualnego lub do końca następnego gdy jesteśmy na końcu
 
 ⚡️ Ćwiczenie:

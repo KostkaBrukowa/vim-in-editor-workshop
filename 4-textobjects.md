@@ -48,7 +48,7 @@ export function getCurrencySymbol(): string {
 ```
 
 ⚡️ Ćwiczenie:
-Skopiuj zawartość pierwszej kolumny do każdej kolumny w gridzie zmieniając numer na końcu
+Skopiuj zawartość pierwszej kolumny (<Column />) do każdej kolumny w gridzie, zmieniając numer na końcu
 na numer kolumny.
 Usuń całą ostatnią kolumnę
 

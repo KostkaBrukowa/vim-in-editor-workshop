@@ -5,21 +5,24 @@ import { Button, Type } from './mrc';
 import style from './App.pcss';
 import { i18n } from './i18n';
 
-// to pick from
-// CollapsedBatchEditSummary.js
-// ExpandedBatchEditSummary.js
-// EndDateEditDialog.js
+/*
+* 1. Zamienić komponent klasowy na funkcyjny
+* 2. Zamienić propsTypes na interface
+* 3. Wynieść style do osobnego pliku
+* 4. Poprawić wszystkie błędy
+* */
 
-export const failedClassNames = classNames(selectors.mColorRed);
 
-export const footerClassNames = classNames(
+const failedClassNames = classNames(selectors.mColorRed);
+
+const footerClassNames = classNames(
   selectors.mDisplayFlex,
   selectors.mFlexJustifyBetween,
   selectors.mFlexDirectionColumnReverse,
   selectors.mFlexDirectionRowReverseMd,
 );
 
-export const subTitleClassNames = selectors.mMarginBottom0;
+const subTitleClassNames = selectors.mMarginBottom0;
 
 export class CollapsedBatchEditSummary extends Component {
   static propTypes = {

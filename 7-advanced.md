@@ -1,7 +1,7 @@
 📋 Lekcja 7.1.: Zaawansowane rzeczy
 
 Do tej pory nauczyliśmy się wszystkiego co potrzebne nam jest
-do normalnej pracy (a nawet trochę więcej). W tej lekcji pokażę kilka technik
+do normalnej pracy (a nawet trochę więcej). W tej lekcji pokażę kilka technik,
 których używam na codzień i przyspieszają pracę, ale nie są niezbędne do używania vim motions.
 
 📋 1. `f` `t` `;` `,`
@@ -35,9 +35,9 @@ Np. możemy wykonać `dt)` (delete till `)` ) czyli usunąć wszystko do zamkni�
 
 ```
 
-Często jest tak że w danej linii jest wiele liter które chcemy wyszukać, przez co
-czasem szybiej jest po prostu użyć `w`, dlatego najefektywniejsze wyszukiwanie 
-tymi znakami będzie wtedy gdy będziemy szukać znaków specjalnych `(` `{` itp, bo zazwyczaj
+Często jest tak, że w danej linii jest wiele liter, które chcemy wyszukać, przez co
+czasem szybciej jest po prostu użyć `w`, dlatego najefektywniejsze wyszukiwanie 
+tymi znakami będzie wtedy, gdy będziemy szukać znaków specjalnych `(` `{` itp, bo zazwyczaj
 nie ma ich więcej niż jeden per linia.
 
 📋 2. `c`
@@ -89,9 +89,9 @@ które też zmniejszają wymaganą liczbę wciśniętych przycisków o 1.
 
 📋 3. `.` - kropka
 Bardzo potężny operator. Pozwala nam wykonać ponownie ostatnią akcję. Wspomniałem 
-wsześniej o tym że niektóre akcje mogą być `dot-repeatable`. I tu nauczymy się co to znaczy.
-Powiedzmy że chcemy zamienić wszystkie poniższe stringi na tę samą wartość `10`. Możemy wchodzić 
-do wszystkich `''` i po koleji wykonywać `ci'10` (change in '' 10). Ale jak możecie zauważyć 
+wcześniej o tym, że niektóre akcje mogą być `dot-repeatable`. I tu nauczymy się, co to znaczy.
+Powiedzmy, że chcemy zamienić wszystkie poniższe stringi na tę samą wartość `10`. Możemy wchodzić 
+do wszystkich `''` i po kolei wykonywać `ci'10` (change in '' 10). Ale jak możecie zauważyć,
 robilibyśmy tę samą akcję kilkukrotnie. Tu na pomoc przychodzi nam `.` (dot). Po wykonaniu pojedynczej
 akcji, możemy wcisnąć tę `.` i ta sama akcja wykona nam się ponownie. Spróbujcie
 
@@ -106,7 +106,7 @@ const obj = {
 
 Uwaga!
 Akcje wykonane w visual mode nie są dot-repeatable. Dlatego też `ciw`, `dt(` itp. są
-bardzo pożyteczne bo możemy je łatwo powtarzać
+bardzo pożyteczne, bo możemy je łatwo powtarzać
 
 ⚡️ Ćwiczenie:
 

@@ -51,7 +51,7 @@ I tyle tekst zostanie zastąpiony
 ```tsx
 const marketplace = 'pl-PL';
 const currency = 'zł';
-const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
+const currencySymbol = getCurrencySymbol(marketplace, currency);
 
 export function getCurrencySymbol(marketplace: string, currency: string): string {
   return (0)

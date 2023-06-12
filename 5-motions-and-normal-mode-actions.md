@@ -3,6 +3,7 @@
 
 W poprzedniej lekcji nauczyliśmy się, czym są textobjects. Vim posiada też coś
 co nazywa się `motions`. Motions to są po prostu komendy, dzięki którym możemy się 
+
 poruszać, czyli: `w`, `b` `j` `k` itp.
 
 -----

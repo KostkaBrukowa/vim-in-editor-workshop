@@ -45,6 +45,40 @@ export function getCurrencySymbol(): string {
     .replace(/\d/g, '')
     .trim();
 }
+
+export function formatMoney(value: string | number | null, options: MoneyOptions = {}): string {
+    if (=== null) {
+        // ^ paste: 'value' 
+        return '';
+    }
+
+    const { keepDecimalZeros = true, addCurrencySymbol = true, currencyFromUser } = options;
+
+    const currency = getCurrencyFromStore({ currencyFromUser });
+    //                                      ^ - paste: 'currencyFromUser'
+
+    const number = toNumber(value);
+    let priceParts = priceFormatter({ , locale: _currentLanguage }).formatToParts(number);
+    //                               ^ paste: 'currency'
+
+    const hasDecimalZeros = priceParts.some(
+        //                      ^ paste - 'priceParts'
+        (part) => .type === 'fraction' && toNumber(.value) === 0,
+    //           ^ paste: 'part'                    ^ - paste: 'part'
+);
+
+    if (!) {
+        //   ^ - paste 'addCurrencySymbol'
+        priceParts = priceParts.filter((part) => part.type !== 'currency');
+    }
+
+    if (! && hasDecimalZeros) {
+        //   ^ - paste 'keepDecimalZeros'
+        priceParts = priceParts.filter((part) => part.type !== 'fraction' && part.type !== 'decimal');
+    }
+
+    return priceParts.map((part) => (part.value === NBSP ? ' ' : part.value)).join('');
+}
 ```
 
 ⚡️ Ćwiczenie:

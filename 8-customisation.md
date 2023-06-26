@@ -17,7 +17,7 @@ noremap K 9k
 ...
 ```
 
-W tym pliku możemy zmieniać zachowanie samego edytora jak i rózne skróty klawiszowe.
+W tym pliku możemy zmieniać zachowanie samego edytora, jak i różne skróty klawiszowe.
 
 📋 1. `set`
 Vim ma ogromną liczbę różnych konfiguracji zachowania edytora. Zmieniamy je dodając do 
@@ -34,3 +34,6 @@ W powyższym przykładzie mam kilka skrótów klawiszowych, np. `noremap J 9j`.
 `vnoremap p "_dP` -> (`visual no recursive map p to "_dP`) czyli po wklejeniu w visual mode nie nadpisuj rejestru
 Można też nadpisywać skróty w insert mode, np.
 `inoremap jk <esc>` - (`insert no recursive map jk to <esc>`) czyli jeżeli w normal mode wciśniemy `jk` przejdź do normal mode.
+
+📋 3. Rozszerzenia
+TODO:

@@ -58,8 +58,10 @@ export function (locale: string): string | number {
   return languageIntl.of(locale) ?? '';
 }
 
-export function countryCodeToCountryName(countryCode: string): string {
-  return regionIntl.of(countryCode) ?? '';
+export function countryCodeToCountryName(: string): string {
+//                                       ^ - tu wpisz 'countryCode'    
+  return .of(countryCode) ?? '';
+//       ^ - tu wpisz regionIntl   
 }
 
 export const operationalCountryToSVG: Record<OperationalCountry, string> = {
@@ -84,14 +86,14 @@ export const getSafeTranslation = (key: string, defaultTranslation?: string): st
 ```
 
 ### `o` oraz `O`
-Dosyć częstą czynnością którą wykonujemy podczas kodowania jest rozpoczynaie pisania
-w kolejnej linii.
+Dosyć częstą czynnością, którą wykonujemy podczas kodowania, jest rozpoczynanie pisania
+w kolejnej, bądź poprzedniej linii.
 - `o` - tworzy nową linię pod spodem naszego kursora, przechodzi na początek nowo utworzonej
         linii oraz zmienia nasz tryb na insert
 - `O` - tworzy nową linię nad linią naszego kursora, przechodzi na początek nowo utworzonej
         linii oraz zmienia nasz tryb na insert
 
-Obie te komendy otwierają nową linię nie zależnie od tego gdzie w linni się aktualnie znajdujemy.
+Obie te komendy otwierają nową linię nie zależnie od tego, gdzie w linii się aktualnie znajdujemy.
 
 ⚡️ Ćwiczenie:
 Popraw błędy w kodzie zgodnie z komentarzami
@@ -102,8 +104,7 @@ export interface CreateAdgroupMutationArgs {
 }
 
 export interface EditAdgroupMutationArgs {
-  campaignId: string | null;
-  adGroupId: string | null;
+  campaignId: string | null; // ↓ add new type `adGroupId: string | null; `
   adGroup: AdGroupModel;
 }
 
@@ -115,14 +116,13 @@ const DEFAULT_HEADERS = {
   [HttpHeader.CONTENT_TYPE]: APPLICATION_JSON, // ^ add line above `[HttpHeader.VIM]: APPLICATION_VIM`
 };
 
-const adGroupRequestMapper = new AdGroupRequestMapper();
-const BASE_QUERY = '/campaigns';
+const adGroupRequestMapper = new AdGroupRequestMapper(); // ↓ add new variable `const BASE_QUERY = '/campaigns';`
 export const wizardAdGroupsApi = rootApi.injectEndpoints({
   endpoints: (build) => ({ // ↓ add new key `removeAdgroup: {},`
     createAdGroup: build.mutation<Promise<void>, CreateAdgroupMutationArgs>({
       query: ({ campaignId, adGroup }) => ({
         url: `${BASE_QUERY}/${campaignId}/adgroups`,
-        method: 'POST',
+        // ^ add new variable `method: 'POST',`
         headers: DEFAULT_HEADERS,
         body: JSON.stringify(adGroupRequestMapper.toRequest(adGroup)), // ↓ add new key `cache: true`
       }),
@@ -130,7 +130,7 @@ export const wizardAdGroupsApi = rootApi.injectEndpoints({
     editAdGroup: build.mutation<Promise<void>, EditAdgroupMutationArgs>({
       query: ({ campaignId, adGroup, adGroupId }) => ({
         url: `${BASE_QUERY}/${campaignId}/adgroups/${adGroupId}`,
-        method: 'PUT',
+        // ↓ add new variable `method: 'PUT',`
         headers: DEFAULT_HEADERS,
         body: JSON.stringify(adGroupRequestMapper.toRequest(adGroup)),// ↓ add new key `cache: true`
       }),

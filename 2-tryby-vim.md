@@ -9,7 +9,7 @@ Możesz również używać poleceń Vim do manipulacji tekstem, takich jak usuwa
 
 ### Visual Mode
 W visual mode możesz zaznaczać i manipulować tekst. Zupełnie jak myszką.
-Visual mode jest bardzo pomocnym narzędziem żeby szybko zacząć używać vima
+Visual mode jest bardzo pomocnym narzędziem żeby szybko zacząć używać vima,
 ponieważ praca w visual mode jest bardzo podobna do używania myszki.
 Aby przejść do visual mode, naciśnij klawisz `v` lub `V` z normal mode.
 Gdy jesteś w visual mode, używaj klawiszy poruszania się (h,j,k,l,w,e,b...), aby wybrać odpowiedni tekst.

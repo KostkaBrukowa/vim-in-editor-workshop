@@ -46,6 +46,8 @@ Używając vim motions wielkość liter ma znaczenie. j robi coś innego i J rob
 ⚡️ Ćwiczenie:
 Przejdź kursorem po literach w kolejności alfabetycznej zaczynając od `S` i kończąc na `K` (przed `K` jest `u`)
 
+Quick tip: Jeżeli chcecie wycentrować ekran, wciśnijcie `zz`.
+
 ```
 ............................................................................
 S..........................................................................a
@@ -82,15 +84,15 @@ o..........................................................................p
 ```
 
 📋 w, b, e
-Kolejnymi skrótami które będą nam bardzo pomocne w poruszaniu się po jednej linii to:
+Kolejnymi skrótami, które będą nam bardzo pomocne w poruszaniu się po jednej linii to:
 - w (word) - rusz kursorem w prawą stronę do następnego słowa (lub znaku specjalnego)
-- b (back) - rusz kursorem w lewą stronę do początku poprzedniego słowa jeżeli 
-  jesteśmy na początku aktualnego lub do początku aktualnego gdy nie jesteśmy na początku
-- e (end of a word) - rusz kursorem w prawą stronę do końca aktualnego słowa jeżeli 
-  nie jesteśmy na końcu aktualnego lub do końca następnego gdy jesteśmy na końcu
+- b (back) - rusz kursorem w lewą stronę do początku poprzedniego słowa, jeżeli 
+  jesteśmy na początku aktualnego lub do początku aktualnego, gdy nie jesteśmy na początku
+- e (end of a word) - rusz kursorem w prawą stronę do końca aktualnego słowa, jeżeli 
+  nie jesteśmy na końcu aktualnego lub do końca następnego, gdy jesteśmy na końcu
 
 ⚡️ Ćwiczenie:
-Przejdź po kolelnych znakach `_` a jeżeli trafisz na * usuń literę ('x') i cofnij się o dwa słowa.
+Przejdź po kolejnych znakach `_` a jeżeli trafisz na * usuń literę ('x') i cofnij się o dwa słowa.
 Musisz zebrać wszystkie gwiazdki!
 
 _Kolejnymi _skrótami _które_ _będą_ nam_ bardzo_ _pomocne *w_ _poruszaniu_ się_ po_ jednej_ linii_ _to:

@@ -69,7 +69,7 @@ auctor rhoncus lacus. Phasellus eget porta augue. Maecenas nec imperdiet justo.
 Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
 
 ```tsx
-const currency = 'zł';
+const currency = () => 'zł'; // zamień na `'zł'` i popraw kod
 
 export const Input: FunctionComponent<Props> = ({
   value,

@@ -36,4 +36,5 @@ Można też nadpisywać skróty w insert mode, np.
 `inoremap jk <esc>` - (`insert no recursive map jk to <esc>`) czyli jeżeli w normal mode wciśniemy `jk` przejdź do normal mode.
 
 📋 3. Rozszerzenia
-TODO:
+
+https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins

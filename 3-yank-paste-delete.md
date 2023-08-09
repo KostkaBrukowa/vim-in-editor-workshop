@@ -23,6 +23,12 @@ Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
 Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
 do parametrów
 
+📋 Pro tip: możecie skopiowany text zastąpić zaznaczone słowo. Aby to zrobić:
+1. Skopiujcie zaznaczony tekst.
+2. Zaznaczcie tekst, który chcecie zastąpić
+3. Wciśnijcie `p`
+   I tyle tekst zostanie zastąpiony
+
 ```tsx
 const marketplace = 'pl-PL';
 const currency = 'zł';
@@ -49,7 +55,7 @@ export function formatMoney(value: string | number | null, options: MoneyOptions
 
     const { keepDecimalZeros = true, addCurrencySymbol = true, currencyFromUser } = options;
 
-    const currency = getCurrencyFromStore({ currencyFromUser });
+    const currency = getCurrencyFromStore({  });
     //                                      ^ - paste: 'currencyFromUser'
     
     const number = toNumber(value);
@@ -73,31 +79,6 @@ export function formatMoney(value: string | number | null, options: MoneyOptions
     }
 
     return priceParts.map((part) => (part.value === NBSP ? ' ' : part.value)).join('');
-}
-```
-
-📋 Pro tip: możecie skopiowany text zastąpić zaznaczone słowo. Aby to zrobić:
-1. Skopiujcie zaznaczony tekst.
-2. Zaznaczcie tekst, który chcecie zastąpić
-3. Wciśnijcie `p`
-I tyle tekst zostanie zastąpiony
-
-```tsx
-const marketplace = 'pl-PL';
-const currency = 'zł';
-const currencySymbol = getCurrencySymbol(marketplace, currency);
-
-export function getCurrencySymbol(marketplace: string, currency: string): string {
-  return (0)
-    .toLocaleString(_currentLanguage, {
-      style: 'currency',
-      currency: 'zł', // <---------------------- wklej zastępując zaznaczony tekst
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-      locale: 'pl-PL' // <---------------------- wklej zastępując zaznaczony tekst
-    })
-    .replace(/\d/g, '')
-    .trim();
 }
 ```
 

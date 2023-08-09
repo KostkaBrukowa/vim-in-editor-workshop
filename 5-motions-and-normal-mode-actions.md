@@ -101,67 +101,60 @@ export function formatMoney(value: string | number | null, options: MoneyOptions
 
 ⚡️ Ćwiczenie:
 
-Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
+Zamien zgodnie z komentarzami
 ```tsx
-const currency = (market) => {
-    return marketToCurrency(market);
-};
-
-export const Input: FunctionComponent<Props> = ({
-  value,
-  buttonAfter,
-  clear,
-  hint,
-  errorText,
-  invalid,
-  className,
-  onClear,
-  onFocus,
-  onBlur,
-  onChange,
-  placeholder,
-  type,
-  disabled,
-  autoFocus,
-  errorsVisibleOnFocus = false,
-  errorsSpacing = false,
-}) => {
-  const [localValue, setLocalValue] = useState(getValue(value));
-  const [focused, setFocused] = useState(false);
-
-  const handleChange = (val: string | number): void => {
-    const parsedValue = parseValue(val, currency());
-
-    setLocalValue(parsedValue);
-    onChange?.(parsedValue);
-  };
-
-  const fieldProps = {
-    value: localValue,
-    placeholder,
-    onChange: handleChange,
-    onBlur: handleBlur,
-    onFocus: handleFocus,
-    unit,
-    disabled,
-    autoFocus,
-    valid: !invalidInput,
-    currency: currency(),
-    pristine: false,
-    className: style.field,
-    unitClassName: style.unit,
-    inputProps: { type, maxLength: currency ? CURRENCY_MAX_LENGTH : null },
-  };
-
-  return (
-    <div className={className}>
-      {unit ? <LocalCurrencyField {...fieldProps} /> : <Field {...fieldProps} />}
-      {hint && (typeof hint === 'string' ? <Hint message={hint} /> : <Hint>{hint}</Hint>)}
-      <ErrorMessage className={style.error(invalidInput, errorsSpacing)} message={errorText} currency={currency()}/>
-    </div>
-  );
-};
-
+    <Dialog onClose={onClose} actions={null} disableOverlayClickClose closeIcon open>
+      <form className={style.wrapper} onSubmit={handleSubmit(handleFormSubmit)}>
+        <div className={style.form}>
+          <Heading size="md" level={3}>
+            {i18n('Hello world')} {/* change to: 'Uzupełnij dane' */}
+          </Heading>
+          <Field
+            name="name"
+            control={helloWorld} {/* change to: 'control' */}
+            placeholder={i18n('Wpisz nazwę marki')} {/* change to: 'Wpisz nazwę' */}
+            wrapperClassName={style.input}
+          />
+          <Choice type="checkbox" id="brandForm_foreign" {...register('foreign')}>
+            {i18n('Właściciel marki nie ma polskiego NIPu (nie ma oddziału w Polsce)')}
+          </Choice>
+          <Field
+            name="nip"
+            control={control}
+            placeholder={i18n('Wpisz NIP właściciela marki')}
+            wrapperClassName={style.input}
+            disabled={foreignValue}
+          />
+          <Heading size="md" level={3} className={style.logotypesHeader}>
+            {i18n('Dodaj logotypy ({currentLogotypesCount}/{maxLogotypesCount})', {
+              hello: world, // change to: 'currentLogotypesCount: logotypesCount,' 
+            })}
+          </Heading>
+          <p>
+            {i18n(
+              'Poprawnie przygotowane logo: wymiary 400x400px, maksymalny rozmiar pliku {maxSize}, obrazek zapisany w formacie JPEG lub PNG.',
+              { maxSize: formatFileSize(MAX_SIZE) },
+            )}
+          </p>
+          <Logotypes name="logotypes" control={control} />
+          <div className={style.buttonsRow}>
+            <Button 
+                buttonProps={{ type: 'button' }} {/* change to: 'button' (without parenthesis) */}
+                type="secondary" 
+                onClick={onClose}
+            > 
+              {i18n('Anuluj')}
+            </Button>
+            <Button buttonProps={{ type: 'submit' }} type="secondary" disabled={!formState.isValid}>
+              {i18n('Zapisz')}
+            </Button>
+          </div>
+        </div>
+        <div className={style.tips}>
+          <BrandFormHelp /> {/* change to: '<Tips />' */}
+        </div>
+      </form>
+    </Dialog>
 ```
 
 -----

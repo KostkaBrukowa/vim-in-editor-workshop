@@ -9,6 +9,7 @@ set smartcase     " ignore case if search pattern is all lowercase,
 set incsearch     " show search matches as you type
 set hlsearch      " show search matches as you type
 set number
+set relativenumber
 set clipboard
 
 " faster movement to end and beggining of the line

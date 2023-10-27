@@ -3,6 +3,7 @@
 Na samym początku kopiowaliśmy pewne ustawienia do waszych edytorów.
 
 Jetbrains:
+
 ```
 set number
 set clipboard
@@ -20,7 +21,7 @@ noremap K 9k
 W tym pliku możemy zmieniać zachowanie samego edytora, jak i różne skróty klawiszowe.
 
 📋 1. `set`
-Vim ma ogromną liczbę różnych konfiguracji zachowania edytora. Zmieniamy je dodając do 
+Vim ma ogromną liczbę różnych konfiguracji zachowania edytora. Zmieniamy je dodając do
 pliku konfiguracyjnego linie zaczynające się od `set` jak np. `set clipboard` które kontroluje to
 czy `y` powinien kopiować zawartość do globalnego rejestru czy nie. `set smartcase` kontroluje to,
 jak wyszukiwane będą słowa przy użyciu `/`.
@@ -35,6 +36,9 @@ W powyższym przykładzie mam kilka skrótów klawiszowych, np. `noremap J 9j`.
 Można też nadpisywać skróty w insert mode, np.
 `inoremap jk <esc>` - (`insert no recursive map jk to <esc>`) czyli jeżeli w normal mode wciśniemy `jk` przejdź do normal mode.
 
+No plugins
+dd i yy do sekcji kopiowania
+skrot do nastepnego errora
 📋 3. Rozszerzenia
 
 https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins

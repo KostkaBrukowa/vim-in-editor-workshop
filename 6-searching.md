@@ -2,11 +2,11 @@
 
 Ważnym elementem poruszania się po kodzie jest wyszukiwanie fraz,
 zmiennych czy po prostu tekstu. Aby wyszukać dane słowo w dokumencie,
-wciskamy przycisk 
+wciskamy przycisk
 
-`/` 
+`/`
 lub
-`?`. 
+`?`.
 
 `/` będzie wyszukiwało nam frazy od kursora w dół a
 `?` od kursora w górę. Po wciśnięciu pojawi się nam w lewym dolnym rogu
@@ -19,49 +19,52 @@ a jeżeli w wyszukiwaniu pojawi się duża litera to wyszukiwanie będzie `case 
 spróbować wyszukać `lorem` i `Lorem` i zobaczyć różnicę.
 
 Aby usunąć podświetlenie wyszukiwanego słowa, macie dwie opcje:
+
 - `:nohl<enter>`
-lub
+  lub
 - `/xxx<enter>`
-wtedy podświetlenie zniknie
+  wtedy podświetlenie zniknie
 
 ⚡️ Ćwiczenie:
 
 1. Ile razy w poniższym tekście znajdują się dane słowa:
+
 - [lorem]: _
 - [dolor]: _
 - [in]: _
 
-2. Zamień wszystkie powyższe słowa na ich palindromy:
+2. Zamień wszystkie powyższe słowa na ich odwrocone odpowiedniki:
+
 - lorem -> merol
 - dolor -> rolod
 - in -> ni
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut est in urna sagittis pellentesque vel a felis. 
+merol ipsum dolor sit amet, consectetur adipiscing elit. In ut est in urna sagittis pellentesque vel a felis.
 Donec mollis lacinia sapien a hendrerit. Fusce quis posuere ipsum, dictum volutpat nisi.
 Cras dolor lectus, dictum ac lacinia ac, scelerisque ac neque. Aenean feugiat, libero et venenatis blandit,
 felis tellus consequat augue, sit amet condimentum massa ligula ut tellus. Quisque auctor, urna vel tincidunt blandit,
-ipsum augue pulvinar nulla, id tincidunt turpis nulla in mi. Fusce posuere lorem quis lorem maximus pulvinar. 
-Donec in egestas lorem. Nullam vestibulum nisi at eros porttitor ullamcorper. Vestibulum eget orci vel risus accumsan 
-interdum id at metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sem ut tempus eleifend, eros ipsum viverra odio, 
+ipsum augue pulvinar nulla, id tincidunt turpis nulla in mi. Fusce posuere merol quis lorem maximus pulvinar.
+Donec in egestas lorem. Nullam vestibulum nisi at eros porttitor ullamcorper. Vestibulum eget orci vel risus accumsan
+interdum id at metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sem ut tempus eleifend, eros ipsum viverra odio,
 non gravida turpis nisi non nunc.
-Morbi ullamcorper tristique porttitor. Donec pharetra neque pellentesque suscipit pretium. Interdum et malesuada fames 
+Morbi ullamcorper tristique porttitor. Donec pharetra neque pellentesque suscipit pretium. Interdum et malesuada fames
 ac ante ipsum primis in faucibus. Nulla a dapibus lectus, et maximus ex. Suspendisse potenti. Donec imperdiet ligula at mauris vestibulum gravida. Curabitur mattis interdum ex. Sed sodales risus mauris, ut rhoncus risus dignissim quis. Phasellus consequat malesuada ante sed maximus.
-Mauris ut blandit augue, at scelerisque turpis. Curabitur pharetra interdum sodales. Nunc pretium euismod aliquam. 
+Mauris ut blandit augue, at scelerisque turpis. Curabitur pharetra interdum sodales. Nunc pretium euismod aliquam.
 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut rutrum dignissim purus eu fermentum. Sed massa arcu,
 fringilla a augue at, semper hendrerit risus. Nullam luctus sapien eget libero finibus, eget sagittis diam venenatis. Duis lorem erat,
 faucibus sit amet mi nec, sodales vestibulum enim. Curabitur vel dui sed orci ultrices dictum. Pellentesque pharetra risus eu malesuada lacinia.
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vitae quam metus.
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a fermentum dolor,
 nec finibus ipsum. Nam congue ultrices lacinia.
-Donec ultrices, nulla nec luctus gravida, odio turpis auctor nisl, eu tristique nulla lacus et enim. Aenean tincidunt 
-neque volutpat dolor fermentum ullamcorper. Nam sagittis aliquet auctor. Nulla venenatis, justo sit amet tincidunt pulvinar, 
+Donec ultrices, nulla nec luctus gravida, odio turpis auctor nisl, eu tristique nulla lacus et enim. Aenean tincidunt
+neque volutpat dolor fermentum ullamcorper. Nam sagittis aliquet auctor. Nulla venenatis, justo sit amet tincidunt pulvinar,
 leo erat lobortis enim, ut elementum felis elit in nisi. Phasellus a magna massa. Sed et dui sodales, auctor odio at, fringilla massa.
 Vivamus eu sem ipsum. Aenean condimentum mauris ac gravida pretium.
-Fusce eget felis at sapien lobortis rhoncus eu eget leo. Aliquam euismod elementum lorem at tempus. Nam ut magna lorem. 
-Suspendisse ut augue vulputate, gravida mauris eget, suscipit metus. Ut ornare cursus orci, et facilisis ligula pretium at. 
+Fusce eget felis at sapien lobortis rhoncus eu eget leo. Aliquam euismod elementum lorem at tempus. Nam ut magna lorem.
+Suspendisse ut augue vulputate, gravida mauris eget, suscipit metus. Ut ornare cursus orci, et facilisis ligula pretium at.
 Curabitur fringilla mollis arcu ac aliquam. In hac habitasse platea dictumst. Sed ultricies lobortis enim sit amet faucibus.
-Nam in erat non dui posuere convallis non et ligula. Nam nec nisl quis felis auctor ullamcorper non fermentum ligula. Vivamus 
+Nam in erat non dui posuere convallis non et ligula. Nam nec nisl quis felis auctor ullamcorper non fermentum ligula. Vivamus
 auctor rhoncus lacus. Phasellus eget porta augue. Maecenas nec imperdiet justo.
 ```
 
@@ -69,7 +72,7 @@ auctor rhoncus lacus. Phasellus eget porta augue. Maecenas nec imperdiet justo.
 Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
 
 ```tsx
-const currency = () => 'zł'; // zamień na `'zł'` i popraw kod
+const currency = () => "zł"; // zamień na `'zł'` i popraw kod
 
 export const Input: FunctionComponent<Props> = ({
   value,
@@ -119,14 +122,27 @@ export const Input: FunctionComponent<Props> = ({
 
   return (
     <div className={className}>
-      {unit ? <LocalCurrencyField {...fieldProps} /> : <Field {...fieldProps} />}
-      {hint && (typeof hint === 'string' ? <Hint message={hint} /> : <Hint>{hint}</Hint>)}
-      <ErrorMessage className={style.error(invalidInput, errorsSpacing)} message={errorText} currency={currency()}/>
+      {unit ? (
+        <LocalCurrencyField {...fieldProps} />
+      ) : (
+        <Field {...fieldProps} />
+      )}
+      {hint &&
+        (typeof hint === "string" ? (
+          <Hint message={hint} />
+        ) : (
+          <Hint>{hint}</Hint>
+        ))}
+      <ErrorMessage
+        className={style.error(invalidInput, errorsSpacing)}
+        message={errorText}
+        currency={currency()}
+      />
     </div>
   );
 };
-
 ```
+
 📋 (pro tip: jeżeli najedziecie na słowo i wciśniecie `*` lub `#` od razu zacznie wam się wyszukiwać słowo pod kursorem)
 
 📋 Kolejnym pomocnym narzędziem w wyszukiwaniu jest znak `%`. Przesuwa on nasz kursor na znak,
@@ -138,25 +154,11 @@ Aby poćwiczyć ten znak, spróbuj usunąć całe it-y w pierwszym describe.
 Usuń wszystko we wszystkich nawiasach (`{}`)w drugim describe.
 
 ```tsx
-describe('i18n utils', () => {
-  describe('getSafeTranslation', () => {
-    it('should return translation for existing key', () => {
+describe("i18n utils", () => {
+  describe("getSafeTranslation", () => {
+    it("should return a key for non-existent key if no default value is specified", () => {
       // given
-      const key = 'Existing key';
-      const expectedTranslation = 'Existing translation';
-
-      mockedI18n.mockReturnValue(expectedTranslation);
-
-      // when
-      const translation = getSafeTranslation(key);
-
-      // then
-      expect(translation).toEqual(expectedTranslation);
-    });
-
-    it('should return a key for non-existent key if no default value is specified', () => {
-      // given
-      const key = 'Non-existent key';
+      const key = "Non-existent key";
 
       mockedI18n.mockImplementationOnce(() => {
         throw new Error();
@@ -169,10 +171,10 @@ describe('i18n utils', () => {
       expect(translation).toEqual(key);
     });
 
-    it('should return a default value for non-existent key if default value is specified', () => {
+    it("should return a default value for non-existent key if default value is specified", () => {
       // given
-      const key = 'Non-existent key';
-      const defaultTranslation = 'Default translation';
+      const key = "Non-existent key";
+      const defaultTranslation = "Default translation";
 
       mockedI18n.mockImplementationOnce(() => {
         throw new Error();
@@ -186,33 +188,27 @@ describe('i18n utils', () => {
     });
   });
 
-  describe('localeToLanguageNameWithoutCountryName', () => {
+  describe("localeToLanguageNameWithoutCountryName", () => {
     afterAll(() => {
       jest.resetAllMocks();
     });
 
-    it('should remove accent', () => {
+    it("should remove accent", () => );
+
+    it("should return whole string if no parenthesis are in returned language", () => {
       // when
-      const result = trimAccentFromLocale('pl-PL');
+      const result = trimAccentFromLocale("pl");
 
       // then
-      expect(result).toEqual('pl');
+      expect(result).toEqual("pl");
     });
 
-    it('should return whole string if no parenthesis are in returned language', () => {
+    it("should return empty string if returned language is empty", () => {
       // when
-      const result = trimAccentFromLocale('pl');
+      const result = trimAccentFromLocale("");
 
       // then
-      expect(result).toEqual('pl');
-    });
-
-    it('should return empty string if returned language is empty', () => {
-      // when
-      const result = trimAccentFromLocale('');
-
-      // then
-      expect(result).toEqual('');
+      expect(result).toEqual("");
     });
   });
 });

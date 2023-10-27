@@ -5,8 +5,8 @@ do normalnej pracy (a nawet trochę więcej). W tej lekcji pokażę kilka techni
 których używam na codzień i przyspieszają pracę, ale nie są niezbędne do używania vim motions.
 
 📋 1. `f` `t` `;` `,`
-`f` oraz `t` pozwalają nam szybko poruszać się kursorem w ramach jednej 
-linii. 
+`f` oraz `t` pozwalają nam szybko poruszać się kursorem w ramach jednej
+linii.
 
 - `f<char>` przesuwa nasz kursor w PRAWO do najbliższego znaku `<char>`
 - `F<char>` przesuwa nasz kursor w LEWO do najbliższego znaku `<char>`
@@ -20,10 +20,11 @@ Uwaga!
 Np. możemy wykonać `dt)` (delete till `)` ) czyli usunąć wszystko do zamkniętego nawiasu
 
 ⚡️ Ćwiczenie:
+
 ```
 1. () - - - - - - - - - (move this to other parenthesis, but not this)
 
-2. (move this to other parenthesis, but not this) - - - - - - - - - ()
+2. ( but not this) - - - - - - - - - ()
 
 3. {} - - - - - - - - - {move this to other brackets, but not this}
 
@@ -36,12 +37,12 @@ Np. możemy wykonać `dt)` (delete till `)` ) czyli usunąć wszystko do zamkni�
 ```
 
 Często jest tak, że w danej linii jest wiele liter, które chcemy wyszukać, przez co
-czasem szybciej jest po prostu użyć `w`, dlatego najefektywniejsze wyszukiwanie 
+czasem szybciej jest po prostu użyć `w`, dlatego najefektywniejsze wyszukiwanie
 tymi znakami będzie wtedy, gdy będziemy szukać znaków specjalnych `(` `{` itp, bo zazwyczaj
 nie ma ich więcej niż jeden per linia.
 
 📋 2. `c`
-Komenda `change` pozwala nam na szybsze zmienianie części tekstu. `c` jest zamiennikiem `d`, 
+Komenda `change` pozwala nam na szybsze zmienianie części tekstu. `c` jest zamiennikiem `d`,
 czyli w każdej komendzie gdzie używaliśmy `d` możemy zamiast tego użyć `c`. Różnica między `d` a `c`
 polega na tym, że `c` od razu wchodzi do insert mode po wykonaniu akcji.
 
@@ -51,7 +52,7 @@ Jeżeli chcemy zmienić poniższy typ z `number` na string, możemy albo wykona�
 bez wciskania klawisza `i`, czyli: `ciw` i wpisać string. Oszczędzamy przez to jeden keystroke.
 
 ```ts
-const foo: string = 'string';
+const foo: string = "string";
 ```
 
 ⚡️ Ćwiczenie:
@@ -59,49 +60,49 @@ Zamień tekst zgodnie z komentarzami
 
 ```tsx
 // zamień wartość stringa na `easy to learn`
-const vimIs = 'very hard to learn'
+const vimIs = "very hard to learn";
 
 // zamień wnętrze nawiasów na `value: string`
 function addOne(parameter: string) {
-    return parameter + 1;
+  return parameter + 1;
 }
 
 // zamień wtętrze testu na `expect(true).toBeTruthy()`
-it('should return whole string if no parenthesis are in returned language', () => {
+it("should return whole string if no parenthesis are in returned language", () => {
   // when
-  const result = trimAccentFromLocale('pl');
+  const result = trimAccentFromLocale("pl");
 
   // then
-  expect(result).toEqual('pl');
+  expect(result).toEqual("pl");
 });
 
 const Component = () => {
   // zamień wnętrze buttona na `I will learn vim motions`
   return <button>You will fail learning vim motions</button>;
-}
-
+};
 ```
 
 Mamy też podobne klucze: `s` i `r`.
+
 - `s` (substitute) - usuwa aktualny znak pod kursorem i przechodzi w insert mode
 - `r<char>` (replace) - zastępuje aktualny znak pod kursorem znakiem `<char>`
-które też zmniejszają wymaganą liczbę wciśniętych przycisków o 1.
+  które też zmniejszają wymaganą liczbę wciśniętych przycisków o 1.
 
 📋 3. `.` - kropka
-Bardzo potężny operator. Pozwala nam wykonać ponownie ostatnią akcję. Wspomniałem 
+Bardzo potężny operator. Pozwala nam wykonać ponownie ostatnią akcję. Wspomniałem
 wcześniej o tym, że niektóre akcje mogą być `dot-repeatable`. I tu nauczymy się, co to znaczy.
-Powiedzmy, że chcemy zamienić wszystkie poniższe stringi na tę samą wartość `10`. Możemy wchodzić 
+Powiedzmy, że chcemy zamienić wszystkie poniższe stringi na tę samą wartość `10`. Możemy wchodzić
 do wszystkich `''` i po kolei wykonywać `ci'10` (change in '' 10). Ale jak możecie zauważyć,
 robilibyśmy tę samą akcję kilkukrotnie. Tu na pomoc przychodzi nam `.` (dot). Po wykonaniu pojedynczej
 akcji, możemy wcisnąć tę `.` i ta sama akcja wykona nam się ponownie. Spróbujcie
 
 ```ts
 const obj = {
-  a: '1',
-  b: '2',
-  c: '3',
-  d: '4',
-}
+  a: "4",
+  b: "4",
+  c: "4",
+  d: "4",
+};
 ```
 
 Uwaga!
@@ -111,6 +112,7 @@ bardzo pożyteczne, bo możemy je łatwo powtarzać
 ⚡️ Ćwiczenie:
 
 Zamieńcie funkcję `currency` na zwykłą zmienną i poprawcie kod.
+
 ```tsx
 const currency = (market) => {
     return marketToCurrency(market);
@@ -178,10 +180,10 @@ Ciekawym sposobem na poruszanie się w górę i w dół po dokumencie jest techn
 relative jumps. Relative jumps pozwala nam ruszyć kursor o dokładną liczbę linii
 w górę lub w dół. Robimy to według wzoru.
 <liczba linii>j
-lub 
+lub
 <liczba linii>k
 
-W konfiguracji została włączona opcja relative numbers. Zamienia ona wszystkie linie 
+W konfiguracji została włączona opcja relative numbers. Zamienia ona wszystkie linie
 poniżej i powyżej na relatywną liczbę linii od aktualnej linii. Oznacza to że jeżeli chcemy
 przejść do danej linii musimy po prostu wpisać linię która jest wpisana w danej linii.
 
@@ -220,4 +222,3 @@ Przejdź po liczbach w kolejność od 0 do 9
 Pro tip!
 Np. `9j` to jest motion, czyli możemy też usuwać lub kopiować używając tego motiona.
 Takie komendy jak `y2j` skopiują dwie całe linie (plus aktualną w dół `y3k` skopiuje linie w górę (plus aktualną) itp
-

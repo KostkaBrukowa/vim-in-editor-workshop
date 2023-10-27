@@ -1,18 +1,18 @@
-📋 Lekcja 5.1.: Motion and normal mode actions
------
+## 📋 Lekcja 5.1.: Motion and normal mode actions
 
 W poprzedniej lekcji nauczyliśmy się, czym są textobjects. Vim posiada też coś
-co nazywa się `motions`. Motions to są po prostu komendy, dzięki którym możemy się 
+co nazywa się `motions`. Motions to są po prostu komendy, dzięki którym możemy się
 
 poruszać, czyli: `w`, `b` `j` `k` itp.
 
------
+---
 
 Wykonywanie akcji w normal mode.
 Zamiast używania visual mode, możemy wykonać akcję od razu na textobject
 albo na motion.
 
-Aby to zrobić 
+Aby to zrobić
+
 1. wyobraź sobie, że chcesz wykonać akcję w visual mode np. `vi(d`
 2. a następnie zamień `v` na akcję - w naszym przykładzie `d`.
 
@@ -23,6 +23,7 @@ Podstawowy wzór na wykonywanie akcji w normal mode to:
 <number><command><text object or motion>
 
 Przykłady:
+
 - `diw` (delete inner word)
 - `di(` (delete inner `(` )
 - `da{` (delete around `{` )
@@ -30,14 +31,15 @@ Przykłady:
 - `dw` (delete word)
 - `dj` (delete down)
 - `de` (delete end)
-itp. Dzięki temu będziecie trochę szybciej wykonywać dane akcje i 
-te akcje będą `dot-repeatable` (o tym później).
+  itp. Dzięki temu będziecie trochę szybciej wykonywać dane akcje i
+  te akcje będą `dot-repeatable` (o tym później).
 
 Przykład
+
 ```tsx
-function foo(parameter1, parameter2) {
-    const test  = 10;
-    return test;
+function foo() {
+  const test = 10;
+  return test;
 }
 ```
 
@@ -45,6 +47,8 @@ function foo(parameter1, parameter2) {
 Dodaj `marketplace` do definicji funkcji i użyj jej w samej funkcji.
 Użyj do tego visual mode, kopiowania i usuwania. Dodaj typ `: string`
 do parametrów
+
+Gdy wklejamy musimy użyć visual mode
 
 ```tsx
 const marketplace = 'pl-PL';
@@ -66,7 +70,7 @@ export function getCurrencySymbol(): string {
 
 export function formatMoney(value: string | number | null, options: MoneyOptions = {}): string {
     if (=== null) {
-        // ^ paste: 'value' 
+        // ^ paste: 'value'
         return '';
     }
 
@@ -102,6 +106,7 @@ export function formatMoney(value: string | number | null, options: MoneyOptions
 ⚡️ Ćwiczenie:
 
 Zamien zgodnie z komentarzami
+
 ```tsx
     <Dialog onClose={onClose} actions={null} disableOverlayClickClose closeIcon open>
       <form className={style.wrapper} onSubmit={handleSubmit(handleFormSubmit)}>
@@ -127,7 +132,7 @@ Zamien zgodnie z komentarzami
           />
           <Heading size="md" level={3} className={style.logotypesHeader}>
             {i18n('Dodaj logotypy ({currentLogotypesCount}/{maxLogotypesCount})', {
-              hello: world, // change to: 'currentLogotypesCount: logotypesCount,' 
+              hello: world, // change to: 'currentLogotypesCount: logotypesCount,'
             })}
           </Heading>
           <p>
@@ -138,16 +143,16 @@ Zamien zgodnie z komentarzami
           </p>
           <Logotypes name="logotypes" control={control} />
           <div className={style.buttonsRow}>
-            <Button 
-                buttonProps={{ type: 'button' }} {/* change to: 'button' (without parenthesis) */}
-                type="secondary" 
+            <Button
+                buttonProps={{ type: 'button' }} {/* change '{ type: button }' to: 'button' (without curly braces) */}
+                type="secondary"
                 onClick={onClose}
-            > 
+            >
               {i18n('Anuluj')}
             </Button>
             <Button buttonProps={{ type: 'submit' }} type="secondary" disabled={!formState.isValid}>
               {i18n('Zapisz')}
-            </Button>
+            </Button>parenthesis
           </div>
         </div>
         <div className={style.tips}>
@@ -157,15 +162,19 @@ Zamien zgodnie z komentarzami
     </Dialog>
 ```
 
------
+---
+
 📋 Operacje na całych liniach w normal mode
-W visual mode mieliśmy skrót `V` który zawsze zaznaczał całe linie. W normal mode też mamy odpowiednik 
+W visual mode mieliśmy skrót `V` który zawsze zaznaczał całe linie. W normal mode też mamy odpowiednik
 operowania na całych liniach.
 Są dwa główne skróty o których powinniście pamiętać:
+
 - dd (delete entire line)
 - yy (yank entire line)
+- cc (change entire line)
 
 ⚡️ Ćwiczenie:
+
 - usunąć unusedVariables
 - przenieść wywołanie metody `pageViewed` do useEffect
 - inline title do komponentu `ModuleHeader`
@@ -181,11 +190,10 @@ const HomePage: React.FC = () => {
   const unusedVariable5 = 5;
   const { marketplaceId } = useSelector(selectMarketplace);
 
-  const title = i18n('Witaj w Allegro Ads!'); // <------ inline the variable into ModuleHeader
+  const title = i18n("Witaj w Allegro Ads!"); // <------ inline the variable into ModuleHeader
 
   HomePageEvents.pageViewed(location, marketplaceId, type);
-  useEffect(() => {
-  }, [location, marketplaceId, type]);
+  useEffect(() => {}, [location, marketplaceId, type]);
 
   return (
     <>
@@ -195,6 +203,6 @@ const HomePage: React.FC = () => {
     </>
   );
 };
-
 ```
------
+
+---

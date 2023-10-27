@@ -34,6 +34,7 @@ mode `esc` i przejdź do następnego miejsca.
 - i (insert) - przechodzi do insert mode **W** kolumnie w której jest kursor
 - a (append) - przechodzi do insert mode **ZA** kolumną w której jest kursor
 - A (append end of line) - przechodzi do insert mode na końcu linii
+- I (insert at the beggining) - przechodzi do insert mode na końcu linii
 
 ```tsx
 const languageIntl = new Intl.DisplayNames(_currentLanguage, { type: '' });
@@ -65,7 +66,7 @@ export function countryCodeToCountryName(: string): string {
 }
 
 export const operationalCountryToSVG: Record<OperationalCountry, string> = {
-  PL: 
+  PL: polishFlag,
 //    ^ - wpisz tu `polishFlag,`
   CZ: 
 //    ^ - wpisz tu `czechFlag,`
@@ -101,6 +102,7 @@ Popraw błędy w kodzie zgodnie z komentarzami
 ```tsx
 export interface CreateAdgroupMutationArgs {
   campaignId: string | null; // ↓ add new type `adGroup: AdGroupModel`
+        adGroup:AdgroupModel;
 }
 
 export interface EditAdgroupMutationArgs {

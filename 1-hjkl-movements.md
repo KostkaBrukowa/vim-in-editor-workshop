@@ -50,8 +50,8 @@ Quick tip: Jeżeli chcecie wycentrować ekran, wciśnijcie `zz`.
 
 ```
 ............................................................................
-S..........................................................................a
-K...........................................................................
+A..........................................................................a
+............................................................................
 u..........................................................................t
 ............................................................................
 ............................................................................
@@ -95,9 +95,11 @@ Kolejnymi skrótami, które będą nam bardzo pomocne w poruszaniu się po jedne
 Przejdź po kolejnych znakach `_` a jeżeli trafisz na * usuń literę ('x') i cofnij się o dwa słowa.
 Musisz zebrać wszystkie gwiazdki!
 
-_Kolejnymi _skrótami _które_ _będą_ nam_ bardzo_ _pomocne *w_ _poruszaniu_ się_ po_ jednej_ linii_ _to:
-- _w (word) - rusz *kursorem w prawą_ stronę *do następnego _słowa (lub znaku *specjalnego)_
+_Kolejnymi _skrótami _które_ _będą_ nam_ bardzo_ _pomocne w_ _poruszaniu_ się_ po_ jednej_ linii_ _to:
+- _w (word) - rusz kursorem w prawą_ stronę do następnego _słowa (lub znaku *specjalnego)_
 - _b _(_back_)_ - rusz _kursorem* w _lewą stronę _do *początku _poprzedniego *słowa jeżeli_ 
 
 
 Gratulacje! Umiesz już poruszać się w górę i w dół, w lewo i w prawo oraz po słowie do przodu i do tyłu.
+
+dodać `gg` i `G`

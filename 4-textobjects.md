@@ -2,9 +2,12 @@
 
 Textobject to część tekstu.
 Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych typów:
+
 - `"` – double-quoted string
 - `'` – single quoted string
-- ``` – back quoted string
+- ```– back quoted string
+
+  ```
 - `(` – parenthesized block
 - `[` – bracketed block
 - `{` – brace block
@@ -12,8 +15,9 @@ Vim posiada wiele typów textobject-ów. To jest lista najpopularniejszych typó
 - `t` – single tag
 
 Cały textobject składa się qualifiera (`a` (around) oraz `i` (inside)) oraz typu textobjectu.
-Czyli np. 
-- żeby zaznaczyć wewnątrz nawiasów okrągłych - `vi(` (visual inside ()) (someVeryLongTextToProveThatYouCanEasilySelectVeryLongText)
+Czyli np.
+
+- żeby zaznaczyć wewnątrz nawiasów okrągłych - `vi(` (visual inside ()) (someVeryLon gTextT oProveThatYouCanEasilySelectVeryLongText)
 - żeby zaznaczyć wewnątrz klamer - `vi{` (visual inside {}) {someVeryLongTextToProveThatYouCanEasilySelectVeryLongText}
 - żeby zaznaczyć wewnątrz taga - `vit` (visual inside tag) <button>someVeryLongTextToProveThatYouCanEasilySelectVeryLongText</button>
 - żeby zaznaczyć wewnątrz słowa (inner word) - `viw` (visual inside word)
@@ -31,9 +35,9 @@ do parametrów
 ```tsx
 const marketplace = 'pl-PL';
 const currency = 'zł';
-const currencySymbol = getCurrencySymbol(); // dodaj `marketplace` i `currency` do wywołania tej funkcji
+const currencySymbol = getCurrencySymbol(marketplace); // dodaj `marketplace` i `currency` do wywołania tej funkcji
 
-export function getCurrencySymbol(): string {
+export function getCurrencySymbol(marketplace): string {
   return (0)
     .toLocaleString(_currentLanguage, {
       style: 'currency',
@@ -48,20 +52,20 @@ export function getCurrencySymbol(): string {
 
 export function formatMoney(value: string | number | null, options: MoneyOptions = {}): string {
     if (=== null) {
-        // ^ paste: 'value' 
+        // ^ paste: 'value'
         return '';
     }
 
     const { keepDecimalZeros = true, addCurrencySymbol = true, currencyFromUser } = options;
 
-    const currency = getCurrencyFromStore({ currencyFromUser });
+    const currency = getCurrencyFromStore({  });
     //                                      ^ - paste: 'currencyFromUser'
 
     const number = toNumber(value);
     let priceParts = priceFormatter({ , locale: _currentLanguage }).formatToParts(number);
     //                               ^ paste: 'currency'
 
-    const hasDecimalZeros = priceParts.some(
+    const hasDecimalZeros = .some(
         //                      ^ paste - 'priceParts'
         (part) => .type === 'fraction' && toNumber(.value) === 0,
     //           ^ paste: 'part'                    ^ - paste: 'part'
@@ -88,10 +92,11 @@ Usuń całą ostatnią kolumnę
 
 ```tsx
 const HomePage: React.FC = () => {
-  return <Grid>
+  return (
+    <Grid>
       <Column size="12" xlSize="8" className={style.mainColumn}>
-        1. Copy this text to every column in the grid and change number.
-        This text should be copied to at the same time
+        1. Copy this text to every column in the grid and change number. This
+        text should be copied to at the same time
       </Column>
       <Column size="12" xlSize="4">
         <HomePageArticleTile />
@@ -99,22 +104,22 @@ const HomePage: React.FC = () => {
       <Column size="12" lgSize="4">
         <HomePageCommonTile
           icon="illustrationSmallChart"
-          title={i18n('Allegro Ads w Czechach')}
+          title={i18n("Allegro Ads w Czechach")}
           description={i18n(
-            'Poznaj dostępne formy reklamy, z których możesz skorzystać na allegro.cz.',
+            "Poznaj dostępne formy reklamy, z których możesz skorzystać na allegro.cz.",
           )}
-          buttonText={i18n('Przejdź do artykułu')}
+          buttonText={i18n("Przejdź do artykułu")}
           buttonLink="https://allegro.pl/dla-sprzedajacych/allegro-ads-na-rynku-czeskim-K6YroKlvdsB"
         />
       </Column>
       <Column size="12" lgSize="4">
         <HomePageCommonTile
           icon="illustrationSmallAllegroCommunity"
-          title={i18n('Kurs online w Akademii Allegro')}
+          title={i18n("Kurs online w Akademii Allegro")}
           description={i18n(
-            'Poszerzaj wiedzę o Allegro Ads za pomocą bezpłatnego kursu online w Akademii Allegro.',
+            "Poszerzaj wiedzę o Allegro Ads za pomocą bezpłatnego kursu online w Akademii Allegro.",
           )}
-          buttonText={i18n('Przejdź do kursu')}
+          buttonText={i18n("Przejdź do kursu")}
           buttonLink="https://allegro.pl/academy/increasing-sales-with-allegro-ads"
         />
       </Column>
@@ -122,17 +127,17 @@ const HomePage: React.FC = () => {
       <Column size="12" lgSize="4">
         <HomePageCommonTile
           icon="illustrationSmallUserConnected"
-          title={i18n('Potrzebujesz pomocy?')}
+          title={i18n("Potrzebujesz pomocy?")}
           description={i18n(
-            'Poznaj odpowiedzi na najpopularniejsze pytania dotyczące działania Allegro Ads.',
+            "Poznaj odpowiedzi na najpopularniejsze pytania dotyczące działania Allegro Ads.",
           )}
-          buttonText={i18n('Przejdź do Allegro Pomoc')}
+          buttonText={i18n("Przejdź do Allegro Pomoc")}
           buttonLink="https://allegro.pl/pomoc/dla-sprzedajacych/allegro-ads"
         />
       </Column>
     </Grid>
+  );
 };
-
 ```
 
 ⚡️ Ćwiczenie:
@@ -144,6 +149,7 @@ I trochę JSON-a
 3. Usuń cały klucz `parserOptions`
 4. Usuń wszystkie elementy w tablicy `plugins`
 5. Zamień wartość klucza ze stringa na `{}`
+
 ```json
 {
   "extends": [
@@ -174,6 +180,6 @@ I trochę JSON-a
     "jest-dom",
     "jest"
   ],
-  "rules": "REPLACE THIS STRING TO AN EMPTY OBJECT",
+  "rules": "REPLACE THIS STRING TO AN EMPTY OBJECT"
 }
 ```
